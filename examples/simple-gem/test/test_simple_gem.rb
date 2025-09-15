@@ -1,4 +1,5 @@
-require "test_helper"
+require_relative "../lib/simple_gem"
+require "minitest/autorun"
 
 class TestSimpleGem < Minitest::Test
   def test_hello_without_name

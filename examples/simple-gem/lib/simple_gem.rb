@@ -1,4 +1,4 @@
-require "simple_gem/version"
+require_relative "simple_gem/version"
 
 module SimpleGem
   class Error < StandardError; end
