@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "rebornix.ruby",
+    "castwide.solargraph",
+    "github.copilot",
+    "eamodio.gitlens",
+    "connorshea.vscode-ruby-test-adapter",
+    "redhat.vscode-yaml",
+    "yzhang.markdown-all-in-one",
+    "streetsidesoftware.code-spell-checker",
+    "ms-vscode.vscode-json",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
