@@ -1,0 +1,40 @@
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: chunk + linux
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 記憶力テスト<2025-09-02 Tue>
+** chunking
+** HyperCard = stackとdisplay
+- md
+- html
+- keynote
+- goodnote
+
+* linux = filesをchunkingするためのsystem
+** install, wsl+ubuntu+fish
+** path, directory
+** directory操作
+** file操作
+** path設定
+** command, options
+* github 共有の掟
+** github + ssh
+** git, add, commit, pull, push
+** ruby
+** gem
+** pull request
+** my_help
+* プログラミング言語
+** vscode, chatGPT
+** puts
+** variable = name
+** array, hash
+** loop
+** if-else, case
+** method, argument
+** class
