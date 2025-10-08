@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Ruby",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/console",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "showDebuggerOutput": true
+    },
+    {
+      "name": "Debug Test",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/test/test_helper.rb",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "showDebuggerOutput": true
+    }
+  ]
+}

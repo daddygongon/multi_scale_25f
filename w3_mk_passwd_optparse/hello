@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+def hello(name='world')
+  puts "Hello #{name}."
+end
+
+p ARGV # p (debug) = puts = print("---\n")
+name = ARGV.first || 'world'
+hello(name) 

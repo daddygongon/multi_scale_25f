@@ -1,0 +1,21 @@
+---
+- :head: preparation
+  :images:
+  - images/MultiScale_25f-1.jpg
+  - images/MultiScale_25f-2.jpg
+  - images/MultiScale_25f-3.jpg
+  - images/MultiScale_25f-4.jpg
+  :link: []
+- :head: lecture memo
+  :images:
+  - images/MultiScale_25f-5.jpg
+  - images/MultiScale_25f-6.jpg
+  :link: []
+- :head: lecture keynote
+  :images:
+  - images/w1_chunk.001.png
+  - images/w1_chunk.002.png
+  - images/w1_chunk.003.png
+  - images/w1_chunk.004.png
+  - images/w1_chunk.005.png
+  :link: []

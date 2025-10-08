@@ -1,0 +1,114 @@
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: multi-scale simulation 25f
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* links
+- [[https://kwanseio365-my.sharepoint.com/:f:/g/personal/cru32369_nuc_kwansei_ac_jp/EuUyUic5wypHkIxs5ZcRoIIBNGhlPyYYDkmEKFX5aO8vnA?e=xFpMed][動画他資料]]
+- Github
+  - git clone git@github.com:daddygongon/multi_scale_25f.git
+    でcloneできます．
+* w4_git clone
+sshでremote loginが可能になるように設定します．
+これは，system連携をhostをまたいで可能にすることを意味します．
+
+#+begin_src ruby
+system "ssh-keygen" # return only!! no PassWord!!
+system "cat ~/.ssh/id_ed25519.pub" # then Copy&Paste
+system "explorer.exe https://github.com/daddygongon" # ssh key
+# and copy multi_scale_25f ssh path
+
+system "git clone git@github.com:daddygongon/multi_scale_25f.git"
+#+end_src
+
+* w3_system 連携
+まずはsystem連携の基本です．
+'date|clip.exe'
+って覚えてます？
+
+それの拡張です．振る舞いをoptionで調整する．
+
+以下は来週のための準備です．
+#+begin_src ruby
+# send e-mail to nishitani@kwansei.ac.jp with your github id.
+# you will receive the invitation
+#+end_src
+
+** github + ssh
+- chmod
+- shebang
+- ~/bin, echo $PATH
+
+* w2 Ruby - mk_passwd , code + copilot + 実行
+** install ?
+** copilot設定
+** mk_passwd
+- ask
+- code generation
+- md, preview
+
+* w1 introduction
+** linux = filesをchunkingするためのsystem
+*** wsl+ubuntu+fish for windows
+- path, directory
+- directory操作
+- pwd(print working dir, 省略するために)
+- file操作(* asterisk, wild card)
+- path設定(echo $PATH,)
+*** command, options
+- cli(command line interface)
+- order -short_options --long_option
+** 記憶力テスト<2025-09-02 Tue>
+*** chunking
+*** 記憶力テスト
+*** HyperCard = stackとdisplay
+- text -> figs
+- .md(mark down text), markup言語
+- html(web表示)
+- keynote(ppt)
+- goodnote(手書きメモソフト)
+
+** vscode + copilot
+- copilotが無料利用可能
+  - githubアカウント作成
+  - kwansei.ac.jpのmail addressで登録
+
+* github 共有の掟
+** github + ssh
+** git, add, commit, pull, push
+** ruby
+** gem
+** pull request
+** my_help
+* プログラミング言語
+** vscode, chatGPT
+** puts
+** variable = name
+** array, hash
+** loop
+** if-else, case
+** method, argument
+** class
+
+
+* preparations
+** objectives
+- Linux
+- Ruby
+- Copilot(VSCode)
+
+** copilot謹製
+- むずい
+- 網羅している
+- 適切な課題
+** original
+- 簡易版
+- Rubyの文法を少し
+- copilot任せをだいぶ
+  - 動けばいい => test
+- Document作成，卒業論文!=日報
+  - citation, referenceが必須

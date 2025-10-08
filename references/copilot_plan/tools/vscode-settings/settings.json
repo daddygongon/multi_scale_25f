@@ -1,0 +1,65 @@
+{
+  "ruby.intellisense": "rubyLanguageServer",
+  "ruby.format": "rubocop",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  
+  // GitHub Copilot 設定
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true,
+    "ruby": true
+  },
+  "github.copilot.inlineSuggest.enable": true,
+  
+  // Ruby 固有の設定
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    }
+  },
+  
+  // Git 設定
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  
+  // ファイル関連設定
+  "files.associations": {
+    "Gemfile": "ruby",
+    "Rakefile": "ruby",
+    "*.gemspec": "ruby"
+  },
+  
+  // ターミナル設定
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.shell.linux": "/bin/bash",
+  
+  // 検索設定
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/vendor": true,
+    "**/coverage": true,
+    "**/.bundle": true
+  },
+  
+  // ファイル監視設定
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "**/.bundle/**": true
+  }
+}

@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+class PasswordGenerator # camel case
+  def initialize(length=4) # snake case
+    @length = length
+    chars = Array('a'..'z')
+    password = Array.new(length) { chars.sample }.join
+    puts "Generated password: #{password}"
+  end
+end
+
+if ARGV[0]== '-d' # ARGV = Argument Vector
+  length = (ARGV[1] || 4).to_i
+else
+  length = 4
+end
+
+PasswordGenerator.new(length)
