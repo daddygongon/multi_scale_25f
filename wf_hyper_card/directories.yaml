@@ -1,0 +1,35 @@
+---
+- multi_scale_25f:
+  - bin:
+    - auto_git
+  - delta_diff.pptx
+  - index.html
+  - r1_git_setup.md
+  - readme.html
+  - readme.org
+  - references:
+    - METR_2507_09089v2.pdf
+    - copilot_plan: []
+    - vscode_short_cuts_settings.pdf
+  - w1_chunk:
+    - images: []
+    - list_images.org
+    - list_images.yaml
+    - output.html
+    - w1_chunk.key
+  - w2_mk_passwd:
+    - hello.rb
+    - mk_passwd.rb
+    - readme.md
+  - w3_mk_passwd_optparse:
+    - hash_sample.rb
+    - hello
+    - mk_passwd
+    - mk_passwd_wo_optp
+    - readme.md
+  - ww_hyper_card:
+    - directories.html
+    - directories.yaml
+    - directories_circular.html
+    - mk_dir_array.rb
+    - mk_html.rb

@@ -1,0 +1,40 @@
+学習スキル
+技術 http://ist.ksc.kwansei.ac.jp/~nishitani/?SQ3R
+習慣 http://ist.ksc.kwansei.ac.jp/~nishitani/?FixingMemory
+動機 http://ist.ksc.kwansei.ac.jp/~nishitani/?MindSet%26Flow
+知識 http://ist.ksc.kwansei.ac.jp/~nishitani/?KnowledgeStructure-I
+学習スキル,習慣
+学習スキル,技術
+学習スキル,知識
+学習スキル,動機
+技術,覚える
+知識,プログラミング
+知識,コンピュータリテラシ
+コンピュータリテラシ,パスワード
+コンピュータリテラシ,グーグル
+コンピュータリテラシ,ワード
+コンピュータリテラシ,エクセル
+コンピュータリテラシ,パワポ
+コンピュータリテラシ,メール
+プログラミング,Processing
+プログラミング,HTML
+覚える,Chunk
+Chunk,既知感
+覚える,くぐる
+覚える,音声ループ
+覚える,記憶
+記憶,記述的
+記憶,非記述的
+非記述的,スキル
+非記述的,場所
+非記述的,経験
+記憶,習慣的定着
+記憶,睡眠
+技術,BlindTouch
+プログラミング,Cygwin
+プログラミング,emacs
+動機,能動的学習
+動機,MindSet
+動機,Flow
+習慣,読む
+習慣,時間管理

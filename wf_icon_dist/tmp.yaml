@@ -1,0 +1,8 @@
+---
+- multi_scale_25f:
+  - bin:
+    - auto_git
+  - readme.html
+  - readme.org
+  - references: []
+...

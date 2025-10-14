@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+# VSCode Chatの入出力をcopy & pasteしたreadme.mdを整形するフィルタ
+
+INPUT_PROMPT  = /^daddygongon: (.+)$/
+OUTPUT_PROMPT = /^GitHub Copilot: (.+)$/m
+
+def format_chat(lines)
+  formatted = []
+  in_output = false
+
+  lines.each do |line|
+    case
+    when line.match(INPUT_PROMPT)
+      formatted << "## User"
+      formatted << line.sub(INPUT_PROMPT, '\1').strip
+      in_output = false
+    when line.match(OUTPUT_PROMPT)
+      formatted << "## Copilot"
+      formatted << line.sub(OUTPUT_PROMPT, '\1').strip
+      in_output = true
+    when in_output && line.strip == "---"
+      formatted << "---"
+    else
+      # 直前が空行、かつ現在も空行ならスキップ
+      if !(formatted.last&.empty? && line.strip.empty?)
+        formatted << line.rstrip
+      end
+    end
+  end
+
+  # 先頭・末尾の空行を除去
+  formatted.join("\n").gsub(/\A\n+|\n+\z/, "")
+end
+
+if __FILE__ == $0
+  input_file = ARGV[0] || "readme.md"
+  base = File.basename(input_file, ".*")
+  output_file = "#{base}_formatted.md"
+
+  lines = File.exist?(input_file) ? File.readlines(input_file) : []
+  formatted = format_chat(lines)
+
+  # ここで日付と作成者を挿入
+  author = ENV["USER"] || ENV["USERNAME"] || "unknown"
+  date = Time.now.strftime("%Y-%m-%d")
+  header = "# head\ndate: #{date}\nauthor: #{author}\n\n"
+
+  File.write(output_file, header + formatted)
+end
