@@ -31,7 +31,7 @@ system "git clone git@github.com:daddygongon/multi_scale_25f.git"
 #+end_src
 
 ** auto_git
--
+- history/auto_git~orig
 * w3_system 連携
 まずはsystem連携の基本です．
 'date|clip.exe'
