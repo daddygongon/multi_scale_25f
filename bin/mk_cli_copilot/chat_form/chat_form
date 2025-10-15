@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 # VSCode Chatの入出力をcopy & pasteしたreadme.mdを整形するフィルタ
 
+require 'optparse'
+require 'date'
+
 INPUT_PROMPT  = /^daddygongon: (.+)$/
 OUTPUT_PROMPT = /^GitHub Copilot: (.+)$/m
 
@@ -33,6 +36,13 @@ def format_chat(lines)
 end
 
 if __FILE__ == $0
+  options = { day: 0 }
+  OptionParser.new do |opts|
+    opts.on('-dN', '--day=N', Integer, '日付をN日前/後にずらす (例: -d -7)') do |n|
+      options[:day] = n
+    end
+  end.parse!
+
   input_file = ARGV[0] || "readme.md"
   base = File.basename(input_file, ".*")
   output_file = "#{base}_formatted.md"
@@ -42,7 +52,7 @@ if __FILE__ == $0
 
   # ここで日付と作成者を挿入
   author = ENV["USER"] || ENV["USERNAME"] || "unknown"
-  date = Time.now.strftime("%Y-%m-%d")
+  date = (Date.today + options[:day]).strftime("%Y-%m-%d")
   header = "# head\ndate: #{date}\nauthor: #{author}\n\n"
 
   File.write(output_file, header + formatted)

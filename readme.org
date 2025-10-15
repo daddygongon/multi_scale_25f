@@ -12,7 +12,12 @@
 - Github
   - git clone git@github.com:daddygongon/multi_scale_25f.git
     でcloneできます．
-* w4_git clone
+* future weeks
+** chat_format
+- bin/chat_format
+
+* w4, git clone, auto_git
+** git clone
 sshでremote loginが可能になるように設定します．
 これは，system連携をhostをまたいで可能にすることを意味します．
 
@@ -25,18 +30,14 @@ system "explorer.exe https://github.com/daddygongon" # ssh key
 system "git clone git@github.com:daddygongon/multi_scale_25f.git"
 #+end_src
 
+** auto_git
+-
 * w3_system 連携
 まずはsystem連携の基本です．
 'date|clip.exe'
 って覚えてます？
 
 それの拡張です．振る舞いをoptionで調整する．
-
-以下は来週のための準備です．
-#+begin_src ruby
-# send e-mail to nishitani@kwansei.ac.jp with your github id.
-# you will receive the invitation
-#+end_src
 
 ** github + ssh
 - chmod
