@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
+<head>
+<!-- 2025-10-16 Thu 19:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Knowledge fixer</title>
+<meta name="author" content="Shigeto R. Nishitani" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/code-copy.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/code-copy.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Knowledge fixer</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4fd3a9d">1. ruby2d install</a></li>
+<li><a href="#org6bfbf4e">2. knowledge fixer</a>
+<ul>
+<li><a href="#org2aab521">2.1. Usage</a></li>
+<li><a href="#org748f310">2.2. Description:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4fd3a9d" class="outline-2">
+<h2 id="org4fd3a9d"><span class="section-number-2">1.</span> ruby2d install</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+only for win11.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">sudo apt-get install gcc libxml2-dev libcurl4-gnutls-dev ruby-dev</span>
+sudo apt update
+sudo apt upgrade
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libreadline-dev
+sudo apt-get install rbenv
+sudo apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+sudo gem install ruby2d
+
+<span style="color: #cd6600;">cd</span> multi_scale_25f/
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="https://www.ruby2d.com/learn/linux/#install-packages">linux necessaries</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6bfbf4e" class="outline-2">
+<h2 id="org6bfbf4e"><span class="section-number-2">2.</span> knowledge fixer</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2aab521" class="outline-3">
+<h3 id="org2aab521"><span class="section-number-3">2.1.</span> Usage</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>rake mk_graph</li>
+</ul>
+
+<p>
+これでgraphができる．
+それをcaptureしてみせる．．．
+</p>
+</div>
+</div>
+<div id="outline-container-org748f310" class="outline-3">
+<h3 id="org748f310"><span class="section-number-3">2.2.</span> Description:</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>'ruby codes/mk_dir_array.rb -L 2 .'
+<ul class="org-ul">
+<li>カレントディレクトリ以下2階層のディレクトリ構造をdir.yamlに出力</li>
+</ul></li>
+<li>'ruby codes/mk_node_edge.rb dir.yaml &gt; node_edge.txt'
+<ul class="org-ul">
+<li>dir.yamlからノード・エッジ情報をnode_edge.txtに出力</li>
+</ul></li>
+<li>'ruby codes/knowledge_fixer.rb node_edge.txt'
+<ul class="org-ul">
+<li>node_edge.txtを使ってknowledge fixerを実行</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shigeto R. Nishitani</p>
+<p class="date">Created: 2025-10-16 Thu 19:38</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -24,3 +24,17 @@ cd multi_scale_25f/
 
 - [[https://www.ruby2d.com/learn/linux/#install-packages][linux necessaries]]
 
+* knowledge fixer
+** Usage
+- rake mk_graph
+
+これでgraphができる．
+それをcaptureしてみせる．．．
+
+** Description:
+1. 'ruby codes/mk_dir_array.rb -L 2 .'
+   - カレントディレクトリ以下2階層のディレクトリ構造をdir.yamlに出力
+2. 'ruby codes/mk_node_edge.rb dir.yaml > node_edge.txt'
+   - dir.yamlからノード・エッジ情報をnode_edge.txtに出力
+3. 'ruby codes/knowledge_fixer.rb node_edge.txt'
+   - node_edge.txtを使ってknowledge fixerを実行
