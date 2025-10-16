@@ -6,10 +6,14 @@
     - knowledge_fixer.pde
     - mds/: []
     - old_codes/: []
+    - sketch.properties
   - codes/:
     - fonts/: []
     - knowledge_fixer.rb
-    - mk_dir_array.rb
+    - mk_dir_yaml.rb
     - mk_node_edge.rb
   - dir.yaml
+  - knowledge_fixer.key
   - node_edge.txt
+  - readme.html
+  - readme.org

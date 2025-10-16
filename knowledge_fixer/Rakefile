@@ -12,10 +12,10 @@ task :mk_graph do # any name on task_name
   #   rake mk_graph
   # 
   # Description:
-  #   1. ruby codes/mk_dir_array.rb -L 2 .         # カレントディレクトリ以下2階層のディレクトリ構造をdir.yamlに出力
+  #   1. ruby codes/mk_dir_yaml.rb -L 2 .         # カレントディレクトリ以下2階層のディレクトリ構造をdir.yamlに出力
   #   2. ruby codes/mk_node_edge.rb dir.yaml > node_edge.txt  # dir.yamlからノード・エッジ情報をnode_edge.txtに出力
   #   3. ruby codes/knowledge_fixer.rb node_edge.txt          # node_edge.txtを使ってknowledge fixerを実行
-  ['ruby codes/mk_dir_array.rb -L 2 .',
+  ['ruby codes/mk_dir_yaml.rb -L 2 .',
    'ruby codes/mk_node_edge.rb dir.yaml > node_edge.txt',
    'ruby codes/knowledge_fixer.rb node_edge.txt'].each do |comm|
     puts comm
