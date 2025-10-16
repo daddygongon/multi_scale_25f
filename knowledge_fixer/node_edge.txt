@@ -1,0 +1,27 @@
+node knowledge_fixer/
+node Rakefile
+node archives/
+node data/
+node knowledge_fixer.pde
+node mds/
+node old_codes/
+node codes/
+node fonts/
+node knowledge_fixer.rb
+node mk_dir_array.rb
+node mk_node_edge.rb
+node dir.yaml
+node node_edge.txt
+knowledge_fixer/--Rakefile
+knowledge_fixer/--archives/
+archives/--data/
+archives/--knowledge_fixer.pde
+archives/--mds/
+archives/--old_codes/
+knowledge_fixer/--codes/
+codes/--fonts/
+codes/--knowledge_fixer.rb
+codes/--mk_dir_array.rb
+codes/--mk_node_edge.rb
+knowledge_fixer/--dir.yaml
+knowledge_fixer/--node_edge.txt

@@ -1,0 +1,15 @@
+---
+- knowledge_fixer/:
+  - Rakefile
+  - archives/:
+    - data/: []
+    - knowledge_fixer.pde
+    - mds/: []
+    - old_codes/: []
+  - codes/:
+    - fonts/: []
+    - knowledge_fixer.rb
+    - mk_dir_array.rb
+    - mk_node_edge.rb
+  - dir.yaml
+  - node_edge.txt

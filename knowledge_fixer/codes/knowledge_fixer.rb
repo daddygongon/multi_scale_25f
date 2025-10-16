@@ -1,6 +1,6 @@
 require 'ruby2d'
 
-set width: 600, height: 600
+set width: 800, height: 600
 set title: "KnowledgeFixer Graph"
 set background: 'white'
 
@@ -9,6 +9,26 @@ SELECT_COLOR = 'red'
 FIXED_COLOR = 'green'
 LINKED_COLOR = 'blue'
 EDGE_COLOR = 'black'
+
+FONT_PATH = File.join(__dir__, "fonts", "RobotoMonoNerdFontMono-Regular.ttf")
+
+class Folder
+  # フォルダアイコンをRuby2Dの図形で描画するクラス
+  def initialize(x, y, color: 'orange', z: 10)
+    @x = x
+    @y = y
+    @color = color
+    @z = z
+  end
+
+  def draw
+    # フォルダ本体
+    Rectangle.new(x: @x-28, y: @y-10, width: 56, height: 32, color: @color, z: @z)
+    # フタ部分（左端を本体と揃える: x-28）
+    Rectangle.new(x: @x-28, y: @y-20, width: 32, height: 16, color: @color, z: @z+1)
+    # ※輪郭線は描画しない
+  end
+end
 
 class Node
   attr_accessor :x, :y, :dx, :dy, :label, :fixed, :linked, :color
@@ -74,8 +94,16 @@ class Node
     else
       NODE_COLOR
     end
-    Circle.new(x: x, y: y, radius: 30, color: c, z: 10)
-    Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11)
+    if label.end_with?('/')
+      # フォルダアイコン描画（Folderクラスを利用）
+      Folder.new(x, y, color: c, z: 10).draw
+      # ラベル位置をCircleノードと同じく中心の下側に
+      Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11, font: FONT_PATH)
+    else
+      # 通常ノード（サークル）描画
+      Circle.new(x: x, y: y, radius: 30, color: c, z: 10)
+      Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11, font: FONT_PATH)
+    end
   end
 end
 
@@ -111,7 +139,7 @@ class Edge
     mx = (from.x + to.x) / 2.0
     my = (from.y + to.y) / 2.0
     if label && !label.empty?
-      Text.new(label, x: mx - 15, y: my - 10, size: 16, color: 'gray', z: 6)
+      Text.new(label, x: mx - 15, y: my - 10, size: 16, color: 'gray', z: 6, font: FONT_PATH)
     end
   end
 end
@@ -171,14 +199,29 @@ load_pattern_language(file, nodes, edges, node_table)
 
 selected = nil
 
+on :key_down do |event|
+  @shift_pressed = true if event.key.include?('shift')
+end
+
+on :key_up do |event|
+  @shift_pressed = false if event.key.include?('shift')
+end
+
 on :mouse_down do |event|
   mx, my = event.x, event.y
+  shift_down = !!@shift_pressed
+  #  p ["@shift_pressed:", @shift_pressed, ", shift_down:", shift_down] # ← デバッグ用
   nodes.each do |n|
     if Math.hypot(n.x - mx, n.y - my) < 30
-      selected = n
-      n.fixed = true if event.button == :left
-      n.fixed = false if event.button == :middle
-      n.linked = true if event.button == :right
+      if shift_down
+        n.fixed = false
+        selected = nil
+      else
+        selected = n
+        n.fixed = true if event.button == :left
+        n.fixed = false if event.button == :middle
+        n.linked = true if event.button == :right
+      end
     end
   end
 end
