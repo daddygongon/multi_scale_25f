@@ -1,6 +1,6 @@
 #+OPTIONS: ^:{}
 #+STARTUP: indent nolineimages overview num
-#+TITLE: template for org-file
+#+TITLE: Knowledge fixer
 #+AUTHOR: Shigeto R. Nishitani
 #+EMAIL:     (concat "shigeto_nishitani@mac.com")
 #+LANGUAGE:  jp
@@ -8,6 +8,8 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * ruby2d install
+only for win11.
+
 #+begin_src bash
 # sudo apt-get install gcc libxml2-dev libcurl4-gnutls-dev ruby-dev
 sudo apt update
@@ -20,4 +22,5 @@ sudo gem install ruby2d
 cd multi_scale_25f/
 #+end_src
 
-- [[
+- [[https://www.ruby2d.com/learn/linux/#install-packages][linux necessaries]]
+
