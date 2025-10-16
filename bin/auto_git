@@ -32,15 +32,17 @@ def build_find_exclude_args(ignore_patterns)
   exclude_args = ['-path "./.git/*"']
   ignore_patterns.each do |pat|
     next if pat.empty?
-    if pat.start_with?('/')
-      pat = pat[1..-1]
+    
+    case pat
+    when /^\/(.+)\/$/  # /path/ 形式
+      exclude_args << %Q(-path "./#{$1}/*")
+    when /^\/(.+)$/    # /path 形式
+      exclude_args << %Q(-path "./#{$1}")
+    when /(.+)\/$/     # path/ 形式
+      exclude_args << %Q(-path "*/#{$1}/*")
+    when /.*\/.*/      # path/file 形式
       exclude_args << %Q(-path "./#{pat}")
-    elsif pat.end_with?('/')
-      pat = pat.chomp('/')
-      exclude_args << %Q(-path "*/#{pat}/*")
-    elsif pat.include?('/')
-      exclude_args << %Q(-path "./#{pat}")
-    else
+    else               # filename のみ
       exclude_args << %Q(-name "#{pat}")
     end
   end
@@ -53,6 +55,7 @@ def check_large_files(size_limit)
   ignore_patterns = load_ignore_patterns
   exclude_args = build_find_exclude_args(ignore_patterns)
   exclude_str = exclude_args.map { |e| %Q(\\( #{e} \\) -prune -o) }.join(' ')
+#  p exclude_str
   find_cmd = %Q(find . #{exclude_str} -type f -size +#{size_limit}M -print)
   large_files = `#{find_cmd}`.split("\n")
   if large_files.any?
