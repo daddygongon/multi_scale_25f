@@ -1,0 +1,50 @@
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: multi-scale simulation 25f
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* links
+- [[https://kwanseio365-my.sharepoint.com/:f:/g/personal/cru32369_nuc_kwansei_ac_jp/EuUyUic5wypHkIxs5ZcRoIIBNGhlPyYYDkmEKFX5aO8vnA?e=xFpMed][動画他資料]]
+- Github
+  - git clone git@github.com:daddygongon/multi_scale_25f.git
+    でcloneできます．
+* future weeks
+** chat_format
+- bin/chat_format
+
+* w4, git clone, auto_git
+** git clone
+sshでremote loginが可能になるように設定します．
+これは，system連携をhostをまたいで可能にすることを意味します．
+
+#+begin_src ruby
+system "ssh-keygen" # return only!! no PassWord!!
+system "cat ~/.ssh/id_ed25519.pub" # then Copy&Paste
+system "explorer.exe https://github.com/daddygongon" # ssh key
+# and copy multi_scale_25f ssh path
+
+system "git clone git@github.com:daddygongon/multi_scale_25f.git"
+#+end_src
+
+** my_help
+*** .mdへの変更手順の見直しの必要性
+initの時に，
+1. Yで.orgで設定して
+1. その後.mdに直すと，
+1. ~/.my_helpができていて，さらに.orgなんで何も表示されない
+1. initの見直し？ 
+  1. 手順の見直し
+  1. org->mdへの自動変換．．．
+
+*** juniorの方で，
+1. 'code --wait'への変更
+1. codeをwin版との連携にしてない強者がいた
+directoryがよくわからないな．．．
+
+** auto_git
+- history/auto_git~orig
+
