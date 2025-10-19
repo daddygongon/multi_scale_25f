@@ -1,0 +1,60 @@
+---
+nodes:
+- id: 1
+  name: archives/
+  type: dir
+- id: 2
+  name: s1_pde2rb/
+  type: file
+- id: 3
+  name: s5_mk_lat_graph/
+  type: file
+- id: 4
+  name: s2_relax/
+  type: file
+- id: 5
+  name: s3_mk_dir_yaml/
+  type: file
+- id: 6
+  name: mds/
+  type: file
+- id: 7
+  name: sf_tentative_final/
+  type: file
+- id: 8
+  name: s0_pre_codes/
+  type: file
+- id: 9
+  name: s6_whole_steps/
+  type: file
+- id: 10
+  name: s4_mk_node_edge_yaml/
+  type: file
+edges:
+- from: 1
+  # from: archives/, to: s1_pde2rb/
+  to: 2
+- from: 1
+  # from: archives/, to: s5_mk_lat_graph/
+  to: 3
+- from: 1
+  # from: archives/, to: s2_relax/
+  to: 4
+- from: 1
+  # from: archives/, to: s3_mk_dir_yaml/
+  to: 5
+- from: 1
+  # from: archives/, to: mds/
+  to: 6
+- from: 1
+  # from: archives/, to: sf_tentative_final/
+  to: 7
+- from: 1
+  # from: archives/, to: s0_pre_codes/
+  to: 8
+- from: 1
+  # from: archives/, to: s6_whole_steps/
+  to: 9
+- from: 1
+  # from: archives/, to: s4_mk_node_edge_yaml/
+  to: 10

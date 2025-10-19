@@ -1,0 +1,21 @@
+node HyperCard
+node 知識の構造(ツリーではない)
+node Tree==MindMap
+node chunking(7\pm2)
+node 知的生産の技術(梅棹)
+node 京大(B5)カード
+node toggle表示
+node object指向(思考)
+node enCapsule(隠蔽)
+node Inherit(遺産継承)
+node PolyMorph(多形)
+HyperCard--知識の構造(ツリーではない)
+知識の構造(ツリーではない)--Tree==MindMap
+HyperCard--chunking(7\pm2)
+HyperCard--知的生産の技術(梅棹)
+知的生産の技術(梅棹)--京大(B5)カード 記憶の代わりに記録
+HyperCard--toggle表示
+toggle表示--object指向(思考)
+object指向(思考)--enCapsule(隠蔽)
+object指向(思考)--Inherit(遺産継承)
+object指向(思考)--PolyMorph(多形)

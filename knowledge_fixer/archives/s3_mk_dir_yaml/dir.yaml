@@ -1,0 +1,26 @@
+---
+knowledge_fixer:
+  dir_lattice/:
+    dir.yaml:
+    node_edge.txt:
+  current_codes: "-> ./archives/s5_icon/"
+  hyper_card/:
+    hyper_card.yaml:
+    hyper_card.txt:
+  dir.yaml:
+  archives/:
+    s1_pde2rb/:
+    dir_exporter.rb:
+    dir_exporter.rb~:
+    dir.yaml:
+    knowledge_fixer.pde:
+    s2_relax/:
+    s3_mk_dir_yaml/:
+    mds/:
+    s0_pre_codes/:
+    s5_icon/:
+  readme.html:
+  Rakefile:
+  readme.org:
+  node_edge.txt:
+  knowledge_fixer.key:

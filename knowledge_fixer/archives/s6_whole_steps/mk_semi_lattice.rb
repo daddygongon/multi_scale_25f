@@ -1,6 +1,7 @@
 require 'ruby2d'
+require 'yaml'
 
-set width: 800, height: 600
+set width: 600, height: 600
 set title: "KnowledgeFixer Graph"
 set background: 'white'
 
@@ -9,8 +10,6 @@ SELECT_COLOR = 'red'
 FIXED_COLOR = 'green'
 LINKED_COLOR = 'blue'
 EDGE_COLOR = 'black'
-
-FONT_PATH = File.join(__dir__, "fonts", "RobotoMonoNerdFontMono-Regular.ttf")
 
 class Folder
   # フォルダアイコンをRuby2Dの図形で描画するクラス
@@ -31,19 +30,21 @@ class Folder
 end
 
 class Node
-  attr_accessor :x, :y, :dx, :dy, :label, :fixed, :linked, :color
+  attr_accessor :x, :y, :label, :fixed, :linked, :color, :dx, :dy, :is_folder
 
-  def initialize(label, x, y)
+  def initialize(label, x, y, is_folder: false)
     @label = label
     @x = x
     @y = y
-    @dx = 0
-    @dy = 0
     @fixed = false
     @linked = false
     @color = NODE_COLOR
+    @dx = 0.0
+    @dy = 0.0
+    @is_folder = is_folder
   end
 
+  # ノード同士の反発
   def relax(nodes)
     ddx = 0
     ddy = 0
@@ -73,15 +74,13 @@ class Node
 
   def update
     unless fixed
-      @x += [@dx, -5, 5].sort[1]
-      @y += [@dy, -5, 5].sort[1]
-      
+      @x += [[dx, -5].max, 5].min
+      @y += [[dy, -5].max, 5].min
       @x = [[@x, 0].max, 600].min
       @y = [[@y, 0].max, 600].min
     end
-    
-    @dx /= 2
-    @dy /= 2
+    @dx /= 2.0
+    @dy /= 2.0
   end
 
   def draw(selected)
@@ -94,37 +93,31 @@ class Node
     else
       NODE_COLOR
     end
-    if label.end_with?('/')
-      # フォルダアイコン描画（Folderクラスを利用）
+    if is_folder
       Folder.new(x, y, color: c, z: 10).draw
-      # ラベル位置をCircleノードと同じく中心の下側に
-      Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11, font: FONT_PATH)
+      # フォルダアイコンの中央付近にラベルを描画
+      Text.new(label, x: x-20, y: y-2, size: 16, color: 'black', z: 11)
     else
-      # 通常ノード（サークル）描画
       Circle.new(x: x, y: y, radius: 30, color: c, z: 10)
-      Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11, font: FONT_PATH)
+      Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11)
     end
   end
 end
 
 class Edge
   attr_reader :from, :to
-  attr_accessor :len, :label
-
-  def initialize(from, to, len = 75, label = nil)
+  def initialize(from, to)
     @from = from
     @to = to
-    @len = len
-    @label = label
+    @len = 75.0
   end
 
   def relax
     vx = to.x - from.x
     vy = to.y - from.y
-    d = Math.sqrt(vx * vx + vy * vy)
-    
+    d = Math.hypot(vx, vy)
     if d > 0
-      f = (len - d) / (d * 5)
+      f = (@len - d) / (d * 5)
       dx = f * vx
       dy = f * vy
       to.dx += dx
@@ -134,13 +127,12 @@ class Edge
     end
   end
 
+  def update
+    # 何も処理しないが、将来拡張用
+  end
+
   def draw
     Line.new(x1: from.x, y1: from.y, x2: to.x, y2: to.y, width: 2, color: EDGE_COLOR, z: 5)
-    mx = (from.x + to.x) / 2.0
-    my = (from.y + to.y) / 2.0
-    if label && !label.empty?
-      Text.new(label, x: mx - 15, y: my - 10, size: 16, color: 'gray', z: 6, font: FONT_PATH)
-    end
   end
 end
 
@@ -151,17 +143,23 @@ node_table = {}
 
 # 例: ノード追加
 def add_node(nodes, node_table, label, x, y)
-  n = Node.new(label, x, y)
+  is_folder = label.end_with?('/')
+  # 既存ノードがあればそれを返す
+  return node_table[label] if node_table[label]
+  n = Node.new(label, x, y, is_folder: is_folder)
+  n.dx = 0.0
+  n.dy = 0.0
   nodes << n
   node_table[label] = n
   n
 end
 
 # 例: エッジ追加
-def add_edge(edges, node_table, from_label, to_label, edge_label = nil)
+def add_edge(edges, node_table, from_label, to_label)
   from = node_table[from_label]
   to = node_table[to_label]
-  edges << Edge.new(from, to, 75, edge_label) if from && to
+  return unless from && to
+  edges << Edge.new(from, to)
 end
 
 =begin # サンプルデータ
@@ -172,32 +170,35 @@ add_edge(edges, node_table, "A", "B")
 add_edge(edges, node_table, "B", "C")
 add_edge(edges, node_table, "C", "A")
 =end
-# サンプルデータ
-def load_pattern_language(path, nodes, edges, node_table)
-  File.readlines(path, chomp: true).each do |line|
-    tokens = line.strip.split
-    next if tokens.empty?
-    if tokens[0] == "node"
-      label = tokens[1]
-      x = rand(80..520)
-      y = rand(80..520)
-      add_node(nodes, node_table, label, x, y)
-    elsif line.include?("--")
-      # エッジラベル対応
-      edge_part, *rest = line.split
-      from_label, to_label = edge_part.split("--").map(&:strip)
-      edge_label = rest.join(" ")
-      add_edge(edges, node_table, from_label, to_label, edge_label)
+
+def load_node_edge(path, nodes, edges, node_table)
+  data = YAML.load_file(path)
+  # ノード生成
+  data['nodes'].each do |node|
+    label = node['name']
+    # ランダムな位置に配置
+    x = rand(80..520)
+    y = rand(80..520)
+    add_node(nodes, node_table, label, x, y)
+  end
+  # エッジ生成
+  data['edges'].each do |edge|
+    from_id = edge['from']
+    to_id = edge['to']
+    from_node = data['nodes'].find { |n| n['id'] == from_id }
+    to_node = data['nodes'].find { |n| n['id'] == to_id }
+    if from_node && to_node
+      add_edge(edges, node_table, from_node['name'], to_node['name'])
     end
   end
 end
 
-
-# 既存のサンプルデータ追加部分を削除し、以下を追加
-file = ARGV[0] || "data/PatternLanguage.txt"
-load_pattern_language(file, nodes, edges, node_table)
+file = ARGV[0] || "dir_node_edge.yaml"
+load_node_edge(file, nodes, edges, node_table)
 
 selected = nil
+
+@shift_pressed = false
 
 on :key_down do |event|
   @shift_pressed = true if event.key.include?('shift')
@@ -210,7 +211,6 @@ end
 on :mouse_down do |event|
   mx, my = event.x, event.y
   shift_down = !!@shift_pressed
-  #  p ["@shift_pressed:", @shift_pressed, ", shift_down:", shift_down] # ← デバッグ用
   nodes.each do |n|
     if Math.hypot(n.x - mx, n.y - my) < 30
       if shift_down
@@ -239,15 +239,17 @@ end
 
 update do
   clear
-  
-  # Physics simulation
   edges.each(&:relax)
+  # ノード同士の反発を計算
   nodes.each { |n| n.relax(nodes) }
   nodes.each(&:update)
-  
-  # Drawing
-  edges.each(&:draw)
-  nodes.each { |n| n.draw(selected == n) }
+#  edges.each(&:update)
+  # edges, nodesの順に描画
+  # edges.each(&:draw)
+  # nodes.each { |n| n.draw(selected == n) }
+  # 逆順でも描画
+  edges.reverse.each(&:draw)
+  nodes.reverse.each { |n| n.draw(selected == n) }
 end
 
 show

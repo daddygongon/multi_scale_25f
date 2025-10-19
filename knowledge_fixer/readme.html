@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
 <head>
-<!-- 2025-10-16 Thu 19:55 -->
+<!-- 2025-10-18 Sat 12:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge fixer</title>
@@ -19,6 +19,38 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/code-copy.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -27,19 +59,111 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org943c3ad">1. ruby2d install</a></li>
-<li><a href="#org4185ff3">2. knowledge fixer</a>
+<li><a href="#org1921d7d">1. todos</a></li>
+<li><a href="#orgf093954">2. dir structures</a></li>
+<li><a href="#org65defcb">3. HyperCard</a></li>
+<li><a href="#orgd8f9d52">4. ruby2d install</a></li>
+<li><a href="#org6fa8f32">5. rake mk_graph</a>
 <ul>
-<li><a href="#org42154c4">2.1. Usage</a></li>
-<li><a href="#org0726bfd">2.2. Description:</a></li>
+<li><a href="#org2ba1917">5.1. Usage</a></li>
+<li><a href="#org65d7935">5.2. Description:</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org943c3ad" class="outline-2">
-<h2 id="org943c3ad"><span class="section-number-2">1.</span> ruby2d install</h2>
+<div id="outline-container-org1921d7d" class="outline-2">
+<h2 id="org1921d7d"><span class="section-number-2">1.</span> todos</h2>
 <div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>semi_lattice定着(リゾーム？, nodeではなくedgeに意味あり)</li>
+<li>dir構成をAI提案</li>
+<li>dirとknowledgeの統一</li>
+<li>dirのドット化(.dir_yaml/, dir.yaml, dir_node_edge.yaml)</li>
+<li>bin化</li>
+<li>link化</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf093954" class="outline-2">
+<h2 id="orgf093954"><span class="section-number-2">2.</span> dir structures</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>dir構成をAI提案</li>
+<li>semi lattice rules
+<ul class="org-ul">
+<li>tight binding</li>
+<li>5 pm 2</li>
+<li>week,step,rev:num_names</li>
+<li>contents(toc)
+<ul class="org-ul">
+<li>code, usage, data, results(imrad)
+<ul class="org-ul">
+<li>intro</li>
+<li>method</li>
+<li>results and</li>
+<li>discuss</li>
+<li>summary</li>
+<li>supplements</li>
+</ul></li>
+<li>man in linux
+<ul class="org-ul">
+<li>NAME（名前） - コマンドや関数の名前とその機能を一行で説明する文。</li>
+<li>SYNOPSIS（書式） - コマンドの場合、コマンド行のオプションを含めた形式定義。関数の場合、定義のあるヘッダファイルの指定とプロトタイプ宣言形式の定義。</li>
+<li>DESCRIPTION（説明） - コマンドや関数(option)についての具体的な説明。</li>
+<li>EXAMPLES（例） - 使用法の具体例。</li>
+<li>SEE ALSO（関連項目） - 関連するコマンドや関数のリスト。</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org65defcb" class="outline-2">
+<h2 id="org65defcb"><span class="section-number-2">3.</span> HyperCard</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>PreHyperCard
+<ul class="org-ul">
+<li>Mac
+<ul class="org-ul">
+<li>Mouse, Icon, WYSIWYG, Desktop, PullDownMenu</li>
+</ul></li>
+</ul></li>
+<li>PostHyperCard
+<ul class="org-ul">
+<li>!= html(link&#x2026;)</li>
+<li>www</li>
+<li>wiki(巻物)</li>
+</ul></li>
+<li>HyperCard
+<ul class="org-ul">
+<li><a href="https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53">知識の構造(ツリーではない)&#x2013;qiita</a>
+<ul class="org-ul">
+<li>Tree == MindMap</li>
+</ul></li>
+<li>chunking(7 \(\pm\) 2)</li>
+<li>知的生産の技術(梅棹)
+<ul class="org-ul">
+<li>京大(B5)カード, 記憶の代わりに記録</li>
+</ul></li>
+<li>toggle表示
+<ul class="org-ul">
+<li>Acta</li>
+<li>enCapsule(隠蔽)
+<ul class="org-ul">
+<li>object指向(思考)</li>
+<li>Inherit (遺産継承)</li>
+<li>PolyMorph(多形, morpheme, phoneme)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8f9d52" class="outline-2">
+<h2 id="orgd8f9d52"><span class="section-number-2">4.</span> ruby2d install</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 only for win11.
 </p>
@@ -62,13 +186,13 @@ sudo gem install ruby2d
 </ul>
 </div>
 </div>
-<div id="outline-container-org4185ff3" class="outline-2">
-<h2 id="org4185ff3"><span class="section-number-2">2.</span> knowledge fixer</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org6fa8f32" class="outline-2">
+<h2 id="org6fa8f32"><span class="section-number-2">5.</span> rake mk_graph</h2>
+<div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org42154c4" class="outline-3">
-<h3 id="org42154c4"><span class="section-number-3">2.1.</span> Usage</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org2ba1917" class="outline-3">
+<h3 id="org2ba1917"><span class="section-number-3">5.1.</span> Usage</h3>
+<div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>rake mk_graph</li>
 </ul>
@@ -79,9 +203,9 @@ sudo gem install ruby2d
 </p>
 </div>
 </div>
-<div id="outline-container-org0726bfd" class="outline-3">
-<h3 id="org0726bfd"><span class="section-number-3">2.2.</span> Description:</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org65d7935" class="outline-3">
+<h3 id="org65d7935"><span class="section-number-3">5.2.</span> Description:</h3>
+<div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>'ruby codes/mk_dir_array.rb -L 2 .'
 <ul class="org-ul">
@@ -102,7 +226,7 @@ sudo gem install ruby2d
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Shigeto R. Nishitani</p>
-<p class="date">Created: 2025-10-16 Thu 19:55</p>
+<p class="date">Created: 2025-10-18 Sat 12:35</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

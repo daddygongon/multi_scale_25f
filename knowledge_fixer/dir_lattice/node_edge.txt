@@ -1,12 +1,14 @@
 node knowledge_fixer/
 node Rakefile
 node archives/
+node codes/
 node data/
 node knowledge_fixer.pde
 node mds/
 node old_codes/
+node s1_pde2rb/
+node s2_relax/
 node sketch.properties
-node codes/
 node fonts/
 node knowledge_fixer.rb
 node mk_dir_yaml.rb
@@ -18,10 +20,13 @@ node readme.html
 node readme.org
 knowledge_fixer/--Rakefile
 knowledge_fixer/--archives/
+archives/--codes/
 archives/--data/
 archives/--knowledge_fixer.pde
 archives/--mds/
 archives/--old_codes/
+archives/--s1_pde2rb/
+archives/--s2_relax/
 archives/--sketch.properties
 knowledge_fixer/--codes/
 codes/--fonts/

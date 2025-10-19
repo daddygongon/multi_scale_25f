@@ -7,6 +7,66 @@
 #+OPTIONS:   H:4 toc:t num:2
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
+* names
+- knowledge_fixer :: 知識定着のツール全般
+- semi_lattice :: ruby2dで作る新しいリンク表示
+- hyper_card :: B5の知識集約カード
+
+* semi_lattice dev. todos[/]
+- [ ] archivesの完結
+- [ ] dir構成をAI提案
+- [ ] semi_lattice定着
+  - リゾーム？, nodeではなくedgeに意味あり
+- [ ] dirとknowledgeの統一
+- [ ] bin化(mk_semi_lattice)
+- [ ] dirのドット化
+  - .dir_yaml/
+    - dir.yaml
+    - dir_node_edge.yaml
+    - dir_semi_lattice.yaml
+- [ ] link化
+* dir structures
+- dir構成をAI提案
+- semi lattice rules
+  - tight binding
+  - 5 pm 2
+  - week,step,rev:num_names
+  - contents(toc)
+    - code, usage, data, results(imrad)
+      - intro
+      - method
+      - results and
+      - discuss
+      - summary
+      - supplements
+    - man in linux
+      - NAME（名前） - コマンドや関数の名前とその機能を一行で説明する文。
+      - SYNOPSIS（書式） - コマンドの場合、コマンド行のオプションを含めた形式定義。関数の場合、定義のあるヘッダファイルの指定とプロトタイプ宣言形式の定義。
+      - DESCRIPTION（説明） - コマンドや関数(option)についての具体的な説明。
+      - EXAMPLES（例） - 使用法の具体例。
+      - SEE ALSO（関連項目） - 関連するコマンドや関数のリスト。
+
+* HyperCard
+- PreHyperCard
+  - Mac
+    - Mouse, Icon, WYSIWYG, Desktop, PullDownMenu
+- PostHyperCard
+  - != html(link...)
+  - www
+  - wiki(巻物)
+- HyperCard
+  - [[https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53][知識の構造(ツリーではない)--qiita]]
+    - Tree == MindMap
+  - chunking(7 $\pm$ 2)
+  - 知的生産の技術(梅棹)
+    - 京大(B5)カード, 記憶の代わりに記録
+  - toggle表示
+    - Acta
+    - enCapsule(隠蔽)
+      - object指向(思考)
+      - Inherit (遺産継承)
+      - PolyMorph(多形, morpheme, phoneme)
+    
 * ruby2d install
 only for win11.
 
@@ -24,7 +84,7 @@ cd multi_scale_25f/
 
 - [[https://www.ruby2d.com/learn/linux/#install-packages][linux necessaries]]
 
-* knowledge fixer
+* rake mk_graph
 ** Usage
 - rake mk_graph
 

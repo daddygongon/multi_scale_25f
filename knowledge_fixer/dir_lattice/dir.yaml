@@ -2,10 +2,13 @@
 - knowledge_fixer/:
   - Rakefile
   - archives/:
+    - codes/: []
     - data/: []
     - knowledge_fixer.pde
     - mds/: []
     - old_codes/: []
+    - s1_pde2rb/: []
+    - s2_relax/: []
     - sketch.properties
   - codes/:
     - fonts/: []

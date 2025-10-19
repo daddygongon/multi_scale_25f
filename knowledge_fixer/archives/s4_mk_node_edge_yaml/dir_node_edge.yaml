@@ -1,0 +1,150 @@
+---
+nodes:
+- id: 1
+  name: knowledge_fixer
+  type: dir
+- id: 2
+  name: dir_lattice/
+  type: dir
+- id: 3
+  name: dir.yaml
+  type: file
+- id: 4
+  name: node_edge.txt
+  type: file
+- id: 5
+  name: current_codes
+  type: file
+- id: 6
+  name: hyper_card/
+  type: dir
+- id: 7
+  name: hyper_card.yaml
+  type: file
+- id: 8
+  name: hyper_card.txt
+  type: file
+- id: 9
+  name: dir.yaml
+  type: file
+- id: 10
+  name: archives/
+  type: dir
+- id: 11
+  name: s1_pde2rb/
+  type: file
+- id: 12
+  name: dir_exporter.rb
+  type: file
+- id: 13
+  name: dir_exporter.rb~
+  type: file
+- id: 14
+  name: dir.yaml
+  type: file
+- id: 15
+  name: knowledge_fixer.pde
+  type: file
+- id: 16
+  name: s2_relax/
+  type: file
+- id: 17
+  name: s3_mk_dir_yaml/
+  type: file
+- id: 18
+  name: mds/
+  type: file
+- id: 19
+  name: s0_pre_codes/
+  type: file
+- id: 20
+  name: s5_icon/
+  type: file
+- id: 21
+  name: readme.html
+  type: file
+- id: 22
+  name: Rakefile
+  type: file
+- id: 23
+  name: readme.org
+  type: file
+- id: 24
+  name: node_edge.txt
+  type: file
+- id: 25
+  name: knowledge_fixer.key
+  type: file
+edges:
+- from: 1
+  # from: knowledge_fixer, to: dir_lattice/
+  to: 2
+- from: 2
+  # from: dir_lattice/, to: dir.yaml
+  to: 3
+- from: 2
+  # from: dir_lattice/, to: node_edge.txt
+  to: 4
+- from: 1
+  # from: knowledge_fixer, to: current_codes
+  to: 5
+- from: 1
+  # from: knowledge_fixer, to: hyper_card/
+  to: 6
+- from: 6
+  # from: hyper_card/, to: hyper_card.yaml
+  to: 7
+- from: 6
+  # from: hyper_card/, to: hyper_card.txt
+  to: 8
+- from: 1
+  # from: knowledge_fixer, to: dir.yaml
+  to: 9
+- from: 1
+  # from: knowledge_fixer, to: archives/
+  to: 10
+- from: 10
+  # from: archives/, to: s1_pde2rb/
+  to: 11
+- from: 10
+  # from: archives/, to: dir_exporter.rb
+  to: 12
+- from: 10
+  # from: archives/, to: dir_exporter.rb~
+  to: 13
+- from: 10
+  # from: archives/, to: dir.yaml
+  to: 14
+- from: 10
+  # from: archives/, to: knowledge_fixer.pde
+  to: 15
+- from: 10
+  # from: archives/, to: s2_relax/
+  to: 16
+- from: 10
+  # from: archives/, to: s3_mk_dir_yaml/
+  to: 17
+- from: 10
+  # from: archives/, to: mds/
+  to: 18
+- from: 10
+  # from: archives/, to: s0_pre_codes/
+  to: 19
+- from: 10
+  # from: archives/, to: s5_icon/
+  to: 20
+- from: 1
+  # from: knowledge_fixer, to: readme.html
+  to: 21
+- from: 1
+  # from: knowledge_fixer, to: Rakefile
+  to: 22
+- from: 1
+  # from: knowledge_fixer, to: readme.org
+  to: 23
+- from: 1
+  # from: knowledge_fixer, to: node_edge.txt
+  to: 24
+- from: 1
+  # from: knowledge_fixer, to: knowledge_fixer.key
+  to: 25
