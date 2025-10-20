@@ -1,74 +1,54 @@
 require 'yaml'
 
-def traverse(node, parent_id, nodes, edges, id_counter, id_name_map)
-  if node.is_a?(Hash)
-    node.each do |name, value|
-      node_id = id_counter[:val]
-      id_counter[:val] += 1
-
-      type = value.is_a?(Hash) || value.is_a?(Array) ? 'dir' : 'file'
-      nodes << {
-        'id' => node_id,
-        'name' => name,
-        'type' => type
-      }
-      id_name_map[node_id] = name
-      if parent_id
-        edges << {
-          'from' => parent_id,
-          'to' => node_id
-        }
-      end
-
-      if value.is_a?(Hash) || value.is_a?(Array)
-        traverse(value, node_id, nodes, edges, id_counter, id_name_map)
-      end
-    end
-  elsif node.is_a?(Array)
-    node.each do |item|
-      traverse(item, parent_id, nodes, edges, id_counter, id_name_map)
-    end
-  end
+def node_type(name)
+  name.end_with?('/') ? 'dir' : 'file'
 end
 
-input_path = File.join(File.dirname(__FILE__), 'dir.yaml')
-output_path = File.join(File.dirname(__FILE__), 'dir_node_edge.yaml')
-
-dir_tree = YAML.load_file(input_path)
-nodes = []
-edges = []
-id_counter = { val: 1 }
-id_name_map = {}
-
-traverse(dir_tree, nil, nodes, edges, id_counter, id_name_map)
-
-output = { 'nodes' => nodes, 'edges' => edges }
-
-yaml_str = output.to_yaml
-
-# コメント追加
-yaml_lines = yaml_str.lines
-new_yaml_lines = []
-edges_section = false
-edges_idx = 0
-
-edges_count = edges.size
-
-yaml_lines.each do |line|
-  new_yaml_lines << line
-  if line.strip == 'edges:'
-    edges_section = true
-    next
+def traverse(hash, parent_id = nil, parent_path = '', nodes = [], edges = [], id_counter = [1], path_to_id = {}, id_to_name = {})
+  hash.each do |key, value|
+    name = key
+    type = value.is_a?(Hash) || name.end_with?('/') ? 'dir' : 'file'
+    current_path = parent_path.empty? ? name : File.join(parent_path, name)
+    id = id_counter[0]
+    id_counter[0] += 1
+    nodes << { id: id, name: name, type: type }
+    path_to_id[current_path] = id
+    id_to_name[id] = name
+    if parent_id
+      comment = "# from: #{id_to_name[parent_id]}, to: #{name}"
+      edges << { from: parent_id, to: id, comment: comment }
+    end
+    if value.is_a?(Hash)
+      traverse(value, id, current_path, nodes, edges, id_counter, path_to_id, id_to_name)
+    end
   end
-  if edges_section && line.strip.start_with?('- from:')
-    edge = edges[edges_idx]
-    from_name = id_name_map[edge['from']]
-    to_name = id_name_map[edge['to']]
-    comment = "# from: #{from_name}, to: #{to_name}"
-    new_yaml_lines << "  #{comment}\n"
-    edges_idx += 1
-    edges_section = false if edges_idx >= edges_count
-  end
+  [nodes, edges]
 end
 
-File.write(output_path, new_yaml_lines.join)
+input_path = File.join(__dir__, 'dir.yaml')
+output_path = File.join(__dir__, 'dir_node_edge.yaml')
+
+dir_hash = YAML.load_file(input_path)
+root_key = dir_hash.keys.first
+root_value = dir_hash[root_key]
+
+nodes, edges = [], []
+id_counter = [1]
+path_to_id = {}
+id_to_name = {}
+
+# ルートノード追加
+nodes << { id: id_counter[0], name: "#{root_key}/", type: 'dir' }
+root_id = id_counter[0]
+path_to_id[root_key] = root_id
+id_to_name[root_id] = "#{root_key}/"
+id_counter[0] += 1
+
+traverse(root_value, root_id, root_key, nodes, edges, id_counter, path_to_id, id_to_name)
+
+output_hash = {
+  'nodes' => nodes,
+  'edges' => edges
+}
+
+File.open(output_path, 'w') { |f| f.write(output_hash.to_yaml) }

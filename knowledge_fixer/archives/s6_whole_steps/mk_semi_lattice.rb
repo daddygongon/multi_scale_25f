@@ -30,9 +30,9 @@ class Folder
 end
 
 class Node
-  attr_accessor :x, :y, :label, :fixed, :linked, :color, :dx, :dy, :is_folder
+  attr_accessor :x, :y, :label, :fixed, :linked, :color, :dx, :dy, :type
 
-  def initialize(label, x, y, is_folder: false)
+  def initialize(label, x, y, type = nil)
     @label = label
     @x = x
     @y = y
@@ -41,10 +41,21 @@ class Node
     @color = NODE_COLOR
     @dx = 0.0
     @dy = 0.0
-    @is_folder = is_folder
+    @type = type
   end
 
-  # ノード同士の反発
+  def update
+    unless fixed
+      @x += [@dx, -5, 5].sort[1]
+      @y += [@dy, -5, 5].sort[1]
+      
+      @x = [[@x, 0].max, 600].min
+      @y = [[@y, 0].max, 600].min
+    end
+    @dx /= 2.0
+    @dy /= 2.0
+  end
+
   def relax(nodes)
     ddx = 0
     ddy = 0
@@ -72,17 +83,6 @@ class Node
     end
   end
 
-  def update
-    unless fixed
-      @x += [[dx, -5].max, 5].min
-      @y += [[dy, -5].max, 5].min
-      @x = [[@x, 0].max, 600].min
-      @y = [[@y, 0].max, 600].min
-    end
-    @dx /= 2.0
-    @dy /= 2.0
-  end
-
   def draw(selected)
     c = if selected
       SELECT_COLOR
@@ -93,10 +93,9 @@ class Node
     else
       NODE_COLOR
     end
-    if is_folder
+    if @type == 'dir'
       Folder.new(x, y, color: c, z: 10).draw
-      # フォルダアイコンの中央付近にラベルを描画
-      Text.new(label, x: x-20, y: y-2, size: 16, color: 'black', z: 11)
+      Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11)
     else
       Circle.new(x: x, y: y, radius: 30, color: c, z: 10)
       Text.new(label, x: x-20, y: y-10, size: 18, color: 'black', z: 11)
@@ -142,24 +141,19 @@ edges = []
 node_table = {}
 
 # 例: ノード追加
-def add_node(nodes, node_table, label, x, y)
-  is_folder = label.end_with?('/')
-  # 既存ノードがあればそれを返す
-  return node_table[label] if node_table[label]
-  n = Node.new(label, x, y, is_folder: is_folder)
-  n.dx = 0.0
-  n.dy = 0.0
+def add_node(nodes, node_table, id, x, y, label = nil, type = nil)
+  display_label = label # labelはnameのみを渡す
+  n = Node.new(display_label, x, y, type)
   nodes << n
-  node_table[label] = n
+  node_table[id] = n
   n
 end
 
 # 例: エッジ追加
-def add_edge(edges, node_table, from_label, to_label)
-  from = node_table[from_label]
-  to = node_table[to_label]
-  return unless from && to
-  edges << Edge.new(from, to)
+def add_edge(edges, node_table, from_id, to_id)
+  from = node_table[from_id]
+  to = node_table[to_id]
+  edges << Edge.new(from, to) if from && to
 end
 
 =begin # サンプルデータ
@@ -170,34 +164,38 @@ add_edge(edges, node_table, "A", "B")
 add_edge(edges, node_table, "B", "C")
 add_edge(edges, node_table, "C", "A")
 =end
-
-def load_node_edge(path, nodes, edges, node_table)
-  data = YAML.load_file(path)
-  # ノード生成
-  data['nodes'].each do |node|
-    label = node['name']
+# サンプルデータ
+def load_yaml_data(path, nodes, edges, node_table)
+  data = YAML.load_file(path, symbolize_names: true)
+  
+  # ノードを作成
+  data[:nodes].each do |node_data|
+    id = node_data[:id]
+    name = node_data[:name]
+    type = node_data[:type]
+    
     # ランダムな位置に配置
     x = rand(80..520)
     y = rand(80..520)
-    add_node(nodes, node_table, label, x, y)
+    
+    # ノードのラベルはnameのみ
+    label = name
+    add_node(nodes, node_table, id, x, y, label, type)
   end
-  # エッジ生成
-  data['edges'].each do |edge|
-    from_id = edge['from']
-    to_id = edge['to']
-    from_node = data['nodes'].find { |n| n['id'] == from_id }
-    to_node = data['nodes'].find { |n| n['id'] == to_id }
-    if from_node && to_node
-      add_edge(edges, node_table, from_node['name'], to_node['name'])
-    end
+  
+  # エッジを作成
+  data[:edges].each do |edge_data|
+    from_id = edge_data[:from]
+    to_id = edge_data[:to]
+    add_edge(edges, node_table, from_id, to_id)
   end
 end
 
+# 既存のサンプルデータ追加部分を削除し、以下を追加
 file = ARGV[0] || "dir_node_edge.yaml"
-load_node_edge(file, nodes, edges, node_table)
+load_yaml_data(file, nodes, edges, node_table)
 
-selected = nil
-
+@selected = nil
 @shift_pressed = false
 
 on :key_down do |event|
@@ -215,9 +213,9 @@ on :mouse_down do |event|
     if Math.hypot(n.x - mx, n.y - my) < 30
       if shift_down
         n.fixed = false
-        selected = nil
+        @selected = nil
       else
-        selected = n
+        @selected = n
         n.fixed = true if event.button == :left
         n.fixed = false if event.button == :middle
         n.linked = true if event.button == :right
@@ -227,29 +225,23 @@ on :mouse_down do |event|
 end
 
 on :mouse_up do
-  selected = nil
+  @selected = nil
 end
 
 on :mouse_move do |event|
-  if selected
-    selected.x = event.x
-    selected.y = event.y
+  if @selected
+    @selected.x = event.x
+    @selected.y = event.y
   end
 end
 
 update do
   clear
   edges.each(&:relax)
-  # ノード同士の反発を計算
   nodes.each { |n| n.relax(nodes) }
   nodes.each(&:update)
-#  edges.each(&:update)
-  # edges, nodesの順に描画
-  # edges.each(&:draw)
-  # nodes.each { |n| n.draw(selected == n) }
-  # 逆順でも描画
   edges.reverse.each(&:draw)
-  nodes.reverse.each { |n| n.draw(selected == n) }
+  nodes.reverse.each { |n| n.draw(@selected == n) }
 end
 
 show

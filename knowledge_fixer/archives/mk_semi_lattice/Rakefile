@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+require "colorize"
+require 'command_line/global'
+
+task :default do
+  system "rake -T"
+end
+

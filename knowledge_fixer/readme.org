@@ -8,23 +8,27 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * names
-- knowledge_fixer :: 知識定着のツール全般
+- hyper_card :: B5ベースの知識集約カードシステム
 - semi_lattice :: ruby2dで作る新しいリンク表示
-- hyper_card :: B5の知識集約カード
+- knowledge_fixer :: 知識定着の概念
+  - pattern language
+  - SQ3R
+  - chunking
 
-* semi_lattice dev. todos[/]
-- [ ] archivesの完結
-- [ ] dir構成をAI提案
-- [ ] semi_lattice定着
+* semi_lattice dev. todos[6/7]
+- [X] archivesの完結
+- [X] semi_lattice定着
   - リゾーム？, nodeではなくedgeに意味あり
-- [ ] dirとknowledgeの統一
-- [ ] bin化(mk_semi_lattice)
-- [ ] dirのドット化
-  - .dir_yaml/
+- [X] dirとknowledgeの統一
+- [X] bin化(mk_semi_lattice)
+- [X] dirのドット化
+  - .semi_lattice/
     - dir.yaml
     - dir_node_edge.yaml
     - dir_semi_lattice.yaml
-- [ ] link化
+    - semi_lattice.yaml
+- [X] link化
+- [ ] windows...
 * dir structures
 - dir構成をAI提案
 - semi lattice rules

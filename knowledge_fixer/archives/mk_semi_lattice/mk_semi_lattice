@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+
+require 'command_line/global'
+
+dir = ARGV[0] || '.'
+layer = ARGV[1] || '2'
+semi_dir = File.join(dir, '.semi_lattice')
+Dir.mkdir(semi_dir) unless Dir.exist?(semi_dir)
+
+# ファイルパスを .semi_lattice 配下に
+dir_yaml_path = File.join(semi_dir, 'dir.yaml')
+node_edge_yaml_path = File.join(semi_dir, 'dir_node_edge.yaml')
+semi_lattice_yaml_path = File.join(semi_dir, 'semi_lattice.yaml')
+
+
+# 中間ファイルを .semi_lattice に出力
+res1 = command_line "ruby ./mk_dir_yaml.rb -L #{layer.to_i} #{dir} -o #{dir_yaml_path}"
+puts res1.stdout
+puts res1.stderr unless res1.stderr.empty?
+res2 = command_line "ruby ./mk_node_edge.rb"
+puts res2.stdout
+puts res2.stderr unless res2.stderr.empty?
+res3 = command_line  "ruby ./mk_semi_lattice_graph.rb #{node_edge_yaml_path}"
+puts res3.stdout
+puts res3.stderr unless res3.stderr.empty?
+

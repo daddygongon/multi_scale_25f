@@ -1,0 +1,45 @@
+---
+nodes:
+- id: 1
+  name: 正の屋外空間
+  type: dir
+- id: 2
+  name: 階段的な屋外空間
+  type: dir
+- id: 3
+  name: 生き生きとした中庭
+  type: dir
+- id: 4
+  name: アーケード
+  type: file
+- id: 5
+  name: 外廊
+  type: file
+- id: 6
+  name: 一間バルコニー
+  type: file
+- id: 7
+  name: 光の入る棟
+  type: file
+edges:
+- from: 1
+  to: 7
+- from: 2
+  to: 4
+- from: 2
+  to: 3
+- from: 1
+  # from: 正の屋外空間, to: 階段的な屋外空間
+  to: 2
+- from: 1
+  # from: 正の屋外空間, to: 生き生きとした中庭
+  to: 3
+- from: 3
+  # from: 生き生きとした中庭, to: アーケード
+  to: 4
+- from: 3
+  # from: 生き生きとした中庭, to: 外廊
+  to: 5
+- from: 3
+  # from: 生き生きとした中庭, to: 一間バルコニー
+  to: 6

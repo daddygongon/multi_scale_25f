@@ -1,0 +1,66 @@
+---
+nodes:
+- id: 1
+  name: HyperCard/
+  type: dir
+- id: 2
+  name: 知識の構造(ツリーではない)--qiita/
+  type: dir
+- id: 3
+  name: Tree==MindMap
+  type: file
+- id: 4
+  name: chunking(7$\pm$2)
+  type: file
+- id: 5
+  name: 知的生産の技術(梅棹)/
+  type: dir
+- id: 6
+  name: 京大(B5)カード, 記憶の代わりに記録
+  type: file
+- id: 7
+  name: toggle表示/
+  type: dir
+- id: 8
+  name: enCapsule(隠蔽)
+  type: dir
+- id: 9
+  name: object指向(思考)/
+  type: dir
+- id: 10
+  name: Inherit(遺産継承)
+  type: file
+- id: 11
+  name: PolyMorph(多形, morpheme, phoneme)
+  type: file
+edges:
+- from: 1
+  # from: HyperCard/, to: 知識の構造(ツリーではない)--qiita/
+  to: 2
+- from: 2
+  # from: 知識の構造(ツリーではない)--qiita/, to: Tree==MindMap
+  to: 3
+- from: 1
+  # from: HyperCard/, to: chunking(7$\pm$2)
+  to: 4
+- from: 1
+  # from: HyperCard/, to: 知的生産の技術(梅棹)/
+  to: 5
+- from: 5
+  # from: 知的生産の技術(梅棹)/, to: 京大(B5)カード, 記憶の代わりに記録
+  to: 6
+- from: 1
+  # from: HyperCard/, to: toggle表示/
+  to: 7
+- from: 7
+  # from: toggle表示/, to: enCapsule(隠蔽)
+  to: 8
+- from: 8
+  # from: enCapsule(隠蔽), to: object指向(思考)/
+  to: 9
+- from: 9
+  # from: object指向(思考)/, to: Inherit(遺産継承)
+  to: 10
+- from: 9
+  # from: object指向(思考)/, to: PolyMorph(多形, morpheme, phoneme)
+  to: 11

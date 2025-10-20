@@ -1,0 +1,14 @@
+---
+mk_semi_lattice/:
+  mk_dir_yaml.rb:
+  mk_node_edge.rb:
+  knowledge_fixer.pde:
+  mk_semi_lattice_graph.rb:
+  readme.md:
+  Rakefile:
+  double_click_open_formatted.md:
+  mk_semi_lattice:
+  save_xy_on_exit_formatted.md:
+  double_click_open.md:
+  save_xy_on_exit.md:
+  readme_formatted.md:

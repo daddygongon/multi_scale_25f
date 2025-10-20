@@ -1,60 +1,114 @@
 ---
 nodes:
 - id: 1
-  name: archives/
+  name: knowledge_fixer/
   type: dir
 - id: 2
-  name: s1_pde2rb/
-  type: file
+  name: dir_lattice/
+  type: dir
 - id: 3
-  name: s5_mk_lat_graph/
+  name: dir.yaml
   type: file
 - id: 4
-  name: s2_relax/
+  name: node_edge.txt
   type: file
 - id: 5
-  name: s3_mk_dir_yaml/
+  name: current_code
   type: file
 - id: 6
-  name: mds/
-  type: file
+  name: hyper_card/
+  type: dir
 - id: 7
-  name: sf_tentative_final/
+  name: hyper_card.yaml
   type: file
 - id: 8
-  name: s0_pre_codes/
+  name: hyper_card.txt
   type: file
 - id: 9
+  name: archives/
+  type: dir
+- id: 10
+  name: s1_pde2rb/
+  type: file
+- id: 11
+  name: s5_mk_lat_graph/
+  type: file
+- id: 12
+  name: s2_relax/
+  type: file
+- id: 13
+  name: s3_mk_dir_yaml/
+  type: file
+- id: 14
+  name: s0_pre_codes/
+  type: file
+- id: 15
   name: s6_whole_steps/
   type: file
-- id: 10
+- id: 16
   name: s4_mk_node_edge_yaml/
+  type: file
+- id: 17
+  name: readme.html
+  type: file
+- id: 18
+  name: readme.org
+  type: file
+- id: 19
+  name: knowledge_fixer.key
   type: file
 edges:
 - from: 1
-  # from: archives/, to: s1_pde2rb/
+  # from: knowledge_fixer/, to: dir_lattice/
   to: 2
-- from: 1
-  # from: archives/, to: s5_mk_lat_graph/
+- from: 2
+  # from: dir_lattice/, to: dir.yaml
   to: 3
-- from: 1
-  # from: archives/, to: s2_relax/
+- from: 2
+  # from: dir_lattice/, to: node_edge.txt
   to: 4
 - from: 1
-  # from: archives/, to: s3_mk_dir_yaml/
+  # from: knowledge_fixer/, to: current_code
   to: 5
 - from: 1
-  # from: archives/, to: mds/
+  # from: knowledge_fixer/, to: hyper_card/
   to: 6
-- from: 1
-  # from: archives/, to: sf_tentative_final/
+- from: 6
+  # from: hyper_card/, to: hyper_card.yaml
   to: 7
-- from: 1
-  # from: archives/, to: s0_pre_codes/
+- from: 6
+  # from: hyper_card/, to: hyper_card.txt
   to: 8
 - from: 1
-  # from: archives/, to: s6_whole_steps/
+  # from: knowledge_fixer/, to: archives/
   to: 9
-- from: 1
-  # from: archives/, to: s4_mk_node_edge_yaml/
+- from: 9
+  # from: archives/, to: s1_pde2rb/
   to: 10
+- from: 9
+  # from: archives/, to: s5_mk_lat_graph/
+  to: 11
+- from: 9
+  # from: archives/, to: s2_relax/
+  to: 12
+- from: 9
+  # from: archives/, to: s3_mk_dir_yaml/
+  to: 13
+- from: 9
+  # from: archives/, to: s0_pre_codes/
+  to: 14
+- from: 9
+  # from: archives/, to: s6_whole_steps/
+  to: 15
+- from: 9
+  # from: archives/, to: s4_mk_node_edge_yaml/
+  to: 16
+- from: 1
+  # from: knowledge_fixer/, to: readme.html
+  to: 17
+- from: 1
+  # from: knowledge_fixer/, to: readme.org
+  to: 18
+- from: 1
+  # from: knowledge_fixer/, to: knowledge_fixer.key
+  to: 19

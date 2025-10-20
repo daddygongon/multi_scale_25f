@@ -160,28 +160,43 @@ end
 file = ARGV[0] || "data/PatternLanguage.txt"
 load_pattern_language(file, nodes, edges, node_table)
 
-selected = nil
+@selected = nil
+@shift_pressed = false
+
+on :key_down do |event|
+  @shift_pressed = true if event.key.include?('shift')
+end
+
+on :key_up do |event|
+  @shift_pressed = false if event.key.include?('shift')
+end
 
 on :mouse_down do |event|
   mx, my = event.x, event.y
+  shift_down = !!@shift_pressed
   nodes.each do |n|
     if Math.hypot(n.x - mx, n.y - my) < 30
-      selected = n
-      n.fixed = true if event.button == :left
-      n.fixed = false if event.button == :middle
-      n.linked = true if event.button == :right
+      if shift_down
+        n.fixed = false
+        @selected = nil
+      else
+        @selected = n
+        n.fixed = true if event.button == :left
+        n.fixed = false if event.button == :middle
+        n.linked = true if event.button == :right
+      end
     end
   end
 end
 
 on :mouse_up do
-  selected = nil
+  @selected = nil
 end
 
 on :mouse_move do |event|
-  if selected
-    selected.x = event.x
-    selected.y = event.y
+  if @selected
+    @selected.x = event.x
+    @selected.y = event.y
   end
 end
 
@@ -191,7 +206,7 @@ update do
   nodes.each { |n| n.relax(nodes) }
   nodes.each(&:update)
   edges.each(&:draw)
-  nodes.each { |n| n.draw(selected == n) }
+  nodes.each { |n| n.draw(@selected == n) }
 end
 
 show

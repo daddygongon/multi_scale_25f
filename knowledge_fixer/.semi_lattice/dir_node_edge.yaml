@@ -1,0 +1,140 @@
+---
+nodes:
+- id: 1
+  name: knowledge_fixer/
+  type: dir
+  file_path: "."
+- id: 2
+  name: current_code
+  type: file
+  file_path: "./current_code"
+- id: 3
+  name: hyper_card/
+  type: dir
+  file_path: "./hyper_card"
+- id: 4
+  name: semi_lattice.yaml
+  type: file
+  file_path: "./hyper_card/semi_lattice.yaml"
+- id: 5
+  name: archives/
+  type: dir
+  file_path: "./archives"
+- id: 6
+  name: s1_pde2rb/
+  type: dir
+  file_path: "./archives/s1_pde2rb"
+- id: 7
+  name: s5_mk_lat_graph/
+  type: dir
+  file_path: "./archives/s5_mk_lat_graph"
+- id: 8
+  name: s2_relax/
+  type: dir
+  file_path: "./archives/s2_relax"
+- id: 9
+  name: s3_mk_dir_yaml/
+  type: dir
+  file_path: "./archives/s3_mk_dir_yaml"
+- id: 10
+  name: s0_pre_codes/
+  type: dir
+  file_path: "./archives/s0_pre_codes"
+- id: 11
+  name: mk_semi_lattice/
+  type: dir
+  file_path: "./archives/mk_semi_lattice"
+- id: 12
+  name: s6_whole_steps/
+  type: dir
+  file_path: "./archives/s6_whole_steps"
+- id: 13
+  name: s4_mk_node_edge_yaml/
+  type: dir
+  file_path: "./archives/s4_mk_node_edge_yaml"
+- id: 14
+  name: readme.html
+  type: file
+  file_path: "./readme.html"
+- id: 15
+  name: Rakefile
+  type: file
+  file_path: "./Rakefile"
+- id: 16
+  name: readme.org
+  type: file
+  file_path: "./readme.org"
+- id: 17
+  name: pattern_lang/
+  type: dir
+  file_path: "./pattern_lang"
+- id: 18
+  name: PatternLanguage.txt
+  type: file
+  file_path: "./pattern_lang/PatternLanguage.txt"
+- id: 19
+  name: semi_lattice.yaml
+  type: file
+  file_path: "./pattern_lang/semi_lattice.yaml"
+- id: 20
+  name: knowledge_fixer.key
+  type: file
+  file_path: "./knowledge_fixer.key"
+edges:
+- from: 1
+  # from: knowledge_fixer/, to: current_code
+  to: 2
+- from: 1
+  # from: knowledge_fixer/, to: hyper_card/
+  to: 3
+- from: 3
+  # from: hyper_card/, to: semi_lattice.yaml
+  to: 4
+- from: 1
+  # from: knowledge_fixer/, to: archives/
+  to: 5
+- from: 5
+  # from: archives/, to: s1_pde2rb/
+  to: 6
+- from: 5
+  # from: archives/, to: s5_mk_lat_graph/
+  to: 7
+- from: 5
+  # from: archives/, to: s2_relax/
+  to: 8
+- from: 5
+  # from: archives/, to: s3_mk_dir_yaml/
+  to: 9
+- from: 5
+  # from: archives/, to: s0_pre_codes/
+  to: 10
+- from: 5
+  # from: archives/, to: mk_semi_lattice/
+  to: 11
+- from: 5
+  # from: archives/, to: s6_whole_steps/
+  to: 12
+- from: 5
+  # from: archives/, to: s4_mk_node_edge_yaml/
+  to: 13
+- from: 1
+  # from: knowledge_fixer/, to: readme.html
+  to: 14
+- from: 1
+  # from: knowledge_fixer/, to: Rakefile
+  to: 15
+- from: 1
+  # from: knowledge_fixer/, to: readme.org
+  to: 16
+- from: 1
+  # from: knowledge_fixer/, to: pattern_lang/
+  to: 17
+- from: 17
+  # from: pattern_lang/, to: PatternLanguage.txt
+  to: 18
+- from: 17
+  # from: pattern_lang/, to: semi_lattice.yaml
+  to: 19
+- from: 1
+  # from: knowledge_fixer/, to: knowledge_fixer.key
+  to: 20
