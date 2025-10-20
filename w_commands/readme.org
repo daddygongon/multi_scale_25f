@@ -1,0 +1,53 @@
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages overview num
+#+TITLE: linux commands
+#+AUTHOR: Shigeto R. Nishitani
+#+EMAIL:     (concat "shigeto_nishitani@mac.com")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* unix command table
+| 分類                 | 通常使用                                       | new commers      |
+| ファイル             | cat chmod chown cp ln ls mkdir mv pwd rm touch | tree bat         |
+| シェルビルトイン     | cd echo                                        |                  |
+| プロセス管理         | bg fg kill ps top                              |                  |
+| テキスト処理         | diff head less more wc xargs                   | delta emacs code |
+| 検索                 | find grep whereis                              | fd               |
+| ソフトウェア開発     |                                                | git rake         |
+| その他               | date                                           | apt brew gem pip |
+| ユーザ管理/環境      | exit history sudo whoami                       |                  |
+| マニュアル           | man                                            | tldr             |
+| 通信                 | ssh                                            |                  |
+
+* example
+- du |sort -nr |head
+- ps -ax |grep emacs
+
+* [[https://ja.wikipedia.org/wiki/Man%E3%83%9A%E3%83%BC%E3%82%B8][manページ@wikipedia]]
+
+* Unixコマンド
+** ファイルとファイルシステム管理	 
+cat chattr chmod chown chgrp cksum cmp cp dd du df file fsck fuser ln ls lsof mkdir mount mv pax pwd rm rmdir size split tee touch type umask 
+** プロセス管理	
+at bg chroot cron fg kill killall nice pgrep pidof pkill ps pstree reboot shutdown time top
+** ユーザ管理/環境	
+clear env exit finger history id logname mesg passwd su sudo uptime talkt put uname w wall who whoami write
+** テキスト処理	
+awk banner basename comm csplit cut diff dirname ed ex fmt fold head iconv join less m4 more nkf nl paste patch printf read sed sort spell strings tail tr troff uniq vi wc xargs yes
+** シェルビルトイン	
+alias cd echo test unset wait
+** 通信	
+dighost ifconfig inetd ip (iproute2) netcat netstat nslookup ping rdate rlogin route ssh trace route
+検索	
+find grep locate whatis whereis 
+** マニュアル	
+apropos help man
+** ソフトウェア開発	
+ar ctags lex make nm strip yacc
+** その他	
+bc dc cal date expr false lp lpr od sl sleep stty true tty
+
+Category:UNIXのソフトウェアUNIXユーティリティの一覧
+
+この記事は2008年11月1日以前にFree On-line Dictionary of Computingから取得した項目の資料を元に、GFDL バージョン1.3以降の「RELICENSING」(再ライセンス) 条件に基づいて組み込まれている。
