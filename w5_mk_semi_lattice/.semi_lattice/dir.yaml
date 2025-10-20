@@ -1,5 +1,5 @@
 ---
-knowledge_fixer/:
+w5_mk_semi_lattice/:
   current_code: "-> ./archives/s6_whole_steps/"
   hyper_card/:
     semi_lattice.yaml:

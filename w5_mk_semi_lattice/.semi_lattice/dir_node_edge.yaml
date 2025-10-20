@@ -1,7 +1,7 @@
 ---
 nodes:
 - id: 1
-  name: knowledge_fixer/
+  name: w5_mk_semi_lattice/
   type: dir
   file_path: "."
 - id: 2
@@ -82,16 +82,16 @@ nodes:
   file_path: "./knowledge_fixer.key"
 edges:
 - from: 1
-  # from: knowledge_fixer/, to: current_code
+  # from: w5_mk_semi_lattice/, to: current_code
   to: 2
 - from: 1
-  # from: knowledge_fixer/, to: hyper_card/
+  # from: w5_mk_semi_lattice/, to: hyper_card/
   to: 3
 - from: 3
   # from: hyper_card/, to: semi_lattice.yaml
   to: 4
 - from: 1
-  # from: knowledge_fixer/, to: archives/
+  # from: w5_mk_semi_lattice/, to: archives/
   to: 5
 - from: 5
   # from: archives/, to: s1_pde2rb/
@@ -118,16 +118,16 @@ edges:
   # from: archives/, to: s4_mk_node_edge_yaml/
   to: 13
 - from: 1
-  # from: knowledge_fixer/, to: readme.html
+  # from: w5_mk_semi_lattice/, to: readme.html
   to: 14
 - from: 1
-  # from: knowledge_fixer/, to: Rakefile
+  # from: w5_mk_semi_lattice/, to: Rakefile
   to: 15
 - from: 1
-  # from: knowledge_fixer/, to: readme.org
+  # from: w5_mk_semi_lattice/, to: readme.org
   to: 16
 - from: 1
-  # from: knowledge_fixer/, to: pattern_lang/
+  # from: w5_mk_semi_lattice/, to: pattern_lang/
   to: 17
 - from: 17
   # from: pattern_lang/, to: PatternLanguage.txt
@@ -136,5 +136,5 @@ edges:
   # from: pattern_lang/, to: semi_lattice.yaml
   to: 19
 - from: 1
-  # from: knowledge_fixer/, to: knowledge_fixer.key
+  # from: w5_mk_semi_lattice/, to: knowledge_fixer.key
   to: 20

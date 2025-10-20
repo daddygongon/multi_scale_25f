@@ -1,144 +1,144 @@
 ---
 :nodes:
 - :id: 1
-  :name: knowledge_fixer/
+  :name: w5_mk_semi_lattice/
   :type: dir
   :file_path: "."
-  :x: 268
-  :y: 233
+  :x: 206
+  :y: 258
   :fixed: true
 - :id: 2
   :name: current_code
   :type: file
   :file_path: "./current_code"
-  :x: 204.3665992005928
-  :y: 287.2521928323011
+  :x: 215.3395565530072
+  :y: 342.06270963263535
   :fixed: false
 - :id: 3
   :name: hyper_card/
   :type: dir
   :file_path: "./hyper_card"
-  :x: 113
-  :y: 116
+  :x: 167
+  :y: 479
   :fixed: true
 - :id: 4
   :name: semi_lattice.yaml
   :type: file
   :file_path: "./hyper_card/semi_lattice.yaml"
-  :x: 38.83549868076225
-  :y: 74.47137440188057
+  :x: 87.78510255425616
+  :y: 448.17792961755674
   :fixed: false
 - :id: 5
   :name: archives/
   :type: dir
   :file_path: "./archives"
-  :x: 183
-  :y: 452
+  :x: 438
+  :y: 160
   :fixed: true
 - :id: 6
   :name: s1_pde2rb/
   :type: dir
   :file_path: "./archives/s1_pde2rb"
-  :x: 233.17871225127433
-  :y: 383.6403784364686
+  :x: 397.4102202194003
+  :y: 85.31754036347039
   :fixed: false
 - :id: 7
   :name: s5_mk_lat_graph/
   :type: dir
   :file_path: "./archives/s5_mk_lat_graph"
-  :x: 153.1576122035925
-  :y: 372.60686984268574
+  :x: 462.1072322712483
+  :y: 78.49023768763121
   :fixed: false
 - :id: 8
   :name: s2_relax/
   :type: dir
   :file_path: "./archives/s2_relax"
-  :x: 101.97681772224541
-  :y: 477.6952066637269
+  :x: 356.4901748868138
+  :y: 135.89298006766904
   :fixed: false
 - :id: 9
   :name: s3_mk_dir_yaml/
   :type: dir
   :file_path: "./archives/s3_mk_dir_yaml"
-  :x: 266.49206232937775
-  :y: 436.0604475704918
+  :x: 413.8931684384989
+  :y: 241.5098808247453
   :fixed: false
 - :id: 10
   :name: s0_pre_codes/
   :type: dir
   :file_path: "./archives/s0_pre_codes"
-  :x: 141.6683774372035
-  :y: 526.2744703975083
+  :x: 478.5900238632538
+  :y: 234.6823269775383
   :fixed: false
 - :id: 11
   :name: mk_semi_lattice/
   :type: dir
   :file_path: "./archives/mk_semi_lattice"
-  :x: 106.44715876285493
-  :y: 415.05886655272684
+  :x: 363.3176814624635
+  :y: 200.59003939216174
   :fixed: false
 - :id: 12
   :name: s6_whole_steps/
   :type: dir
   :file_path: "./archives/s6_whole_steps"
-  :x: 254.6849552036379
-  :y: 497.6756707046808
+  :x: 519.5098180244723
+  :y: 184.1070439004327
   :fixed: false
 - :id: 13
   :name: s4_mk_node_edge_yaml/
   :type: dir
   :file_path: "./archives/s4_mk_node_edge_yaml"
-  :x: 203.85328955400811
-  :y: 534.4023076610366
+  :x: 512.6824680759158
+  :y: 119.41023574730787
   :fixed: false
 - :id: 14
   :name: readme.html
   :type: file
   :file_path: "./readme.html"
-  :x: 351.16330900731043
-  :y: 223.2694217661514
+  :x: 247.72281706801903
+  :y: 184.05676078683376
   :fixed: false
 - :id: 15
   :name: Rakefile
   :type: file
   :file_path: "./Rakefile"
-  :x: 301.88669685200756
-  :y: 310.3986509080785
+  :x: 148.33145996489972
+  :y: 196.0370067991672
   :fixed: false
 - :id: 16
   :name: readme.org
   :type: file
   :file_path: "./readme.org"
-  :x: 189.76757557208214
-  :y: 199.7632596806843
+  :x: 129.06248731418088
+  :y: 292.85058498692865
   :fixed: false
 - :id: 17
   :name: pattern_lang/
   :type: dir
   :file_path: "./pattern_lang"
-  :x: 359
-  :y: 123
+  :x: 429
+  :y: 452
   :fixed: true
 - :id: 18
   :name: PatternLanguage.txt
   :type: file
   :file_path: "./pattern_lang/PatternLanguage.txt"
-  :x: 443.05841462722316
-  :y: 110.38322821170809
+  :x: 350.9841521025544
+  :y: 485.7420728000316
   :fixed: false
 - :id: 19
   :name: semi_lattice.yaml
   :type: file
   :file_path: "./pattern_lang/semi_lattice.yaml"
-  :x: 307.3435031952068
-  :y: 55.4973605119297
+  :x: 374.3664863143144
+  :y: 386.8833417445581
   :fixed: false
 - :id: 20
   :name: knowledge_fixer.key
   :type: file
   :file_path: "./knowledge_fixer.key"
-  :x: 263.3259863837018
-  :y: 148.12781973888502
+  :x: 289.0882385343223
+  :y: 275.18303522958536
   :fixed: false
 :edges:
 - :from: 1
