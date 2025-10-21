@@ -1,0 +1,15 @@
+---
+ARGV[0]:
+'nil':
+'.':
+./.semi_lattice:
+  dir_tree.yaml:
+  dir_node_edge.yaml:
+  semi_lattice.yaml:
+'-t hoge_tree.yaml':
+  hoge_node_edge.yaml:
+  semi_lattice.yaml:
+'-n hoge_node_ege.yaml':
+  semi_lattice.yaml:
+'hoge_semi_lattice.yaml':
+  semi_lattice.yaml:

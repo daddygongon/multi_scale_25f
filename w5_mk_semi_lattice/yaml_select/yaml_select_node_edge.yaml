@@ -1,0 +1,92 @@
+---
+:nodes:
+- :id: 1
+  :name: ARGV[0]
+  :type: dir
+  :file_path: "."
+- :id: 2
+  :name: nil
+  :type: file
+  :file_path: "./nil"
+- :id: 3
+  :name: "."
+  :type: dir
+  :file_path: "."
+- :id: 4
+  :name: "./.semi_lattice"
+  :type: dir
+  :file_path: ".semi_lattice"
+- :id: 5
+  :name: dir_tree.yaml
+  :type: file
+  :file_path: ".semi_lattice/dir_tree.yaml"
+- :id: 6
+  :name: dir_node_edge.yaml
+  :type: file
+  :file_path: ".semi_lattice/dir_node_edge.yaml"
+- :id: 7
+  :name: semi_lattice.yaml
+  :type: file
+  :file_path: ".semi_lattice/semi_lattice.yaml"
+- :id: 8
+  :name: hoge_semi_lattice.yaml
+  :type: dir
+  :file_path: "./hoge_semi_lattice.yaml"
+- :id: 9
+  :name: semi_lattice.yaml
+  :type: file
+  :file_path: "./hoge_semi_lattice.yaml/semi_lattice.yaml"
+- :id: 10
+  :name: "-t hoge_tree.yaml"
+  :type: dir
+  :file_path: "../-t hoge_tree.yaml"
+- :id: 11
+  :name: hoge_node_edge.yaml
+  :type: file
+  :file_path: "../-t hoge_tree.yaml/hoge_node_edge.yaml"
+- :id: 12
+  :name: semi_lattice.yaml
+  :type: file
+  :file_path: "../-t hoge_tree.yaml/semi_lattice.yaml"
+- :id: 13
+  :name: "-n hoge_node_ege.yaml"
+  :type: dir
+  :file_path: "../-n hoge_node_ege.yaml"
+- :id: 14
+  :name: semi_lattice.yaml
+  :type: file
+  :file_path: "../-n hoge_node_ege.yaml/semi_lattice.yaml"
+:edges:
+- :from: 1
+  # from: ARGV[0], to: nil
+  :to: 2
+- :from: 1
+  # from: ARGV[0], to: .
+  :to: 3
+- :from: 3
+  # from: ., to: ./.semi_lattice
+  :to: 4
+- :from: 4
+  # from: ./.semi_lattice, to: dir_tree.yaml
+  :to: 5
+- :from: 4
+  # from: ./.semi_lattice, to: dir_node_edge.yaml
+  :to: 6
+- :from: 4
+  # from: ./.semi_lattice, to: semi_lattice.yaml
+  :to: 7
+- :from: 1
+  # from: ARGV[0], to: hoge_semi_lattice.yaml
+  :to: 8
+- :from: 8
+  # from: hoge_semi_lattice.yaml, to: semi_lattice.yaml
+  :to: 9
+- :from: 10
+  # from: -t hoge_tree.yaml, to: hoge_node_edge.yaml
+  :to: 11
+- :from: 10
+  # from: -t hoge_tree.yaml, to: semi_lattice.yaml
+  :to: 12
+- :from: 13
+  # from: -n hoge_node_ege.yaml, to: semi_lattice.yaml
+  :to: 14
