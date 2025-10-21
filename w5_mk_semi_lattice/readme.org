@@ -1,11 +1,26 @@
 #+OPTIONS: ^:{}
 #+STARTUP: indent nolineimages overview num
-#+TITLE: Knowledge fixer
+#+TITLE: mk semi lattice
 #+AUTHOR: Shigeto R. Nishitani
 #+EMAIL:     (concat "shigeto_nishitani@mac.com")
 #+LANGUAGE:  jp
 #+OPTIONS:   H:4 toc:t num:2
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* install
+- cd multi_scale_25f
+- git stash
+- git pull origin main
+- cat w5_mk_semi_lattice/readme.org
+
+see ** ruby2d install
+
+- cp bin/linux_bins/wsl_ubuntu/open ~/bin
+- cd 
+- git clone git@github.com:daddygongon/mk_semi_lattice.git
+- cd mk_semi_lattice
+- sudo rake install:local
+
 
 * names
 - hyper_card :: B5ベースの知識集約カードシステム
@@ -15,7 +30,7 @@
   - SQ3R
   - chunking
 
-* semi_lattice dev. todos[6/7]
+* semi_lattice dev. todos[7/7]
 - [X] archivesの完結
 - [X] semi_lattice定着
   - リゾーム？, nodeではなくedgeに意味あり
@@ -28,7 +43,7 @@
     - dir_semi_lattice.yaml
     - semi_lattice.yaml
 - [X] link化
-- [ ] windows...
+- [X] windows...
 * dir structures
 - dir構成をAI提案
 - semi lattice rules

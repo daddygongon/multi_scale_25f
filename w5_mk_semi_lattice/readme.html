@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
 <head>
-<!-- 2025-10-20 Mon 18:00 -->
+<!-- 2025-10-21 Tue 17:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Knowledge fixer</title>
+<title>mk semi lattice</title>
 <meta name="author" content="Shigeto R. Nishitani" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
@@ -54,28 +54,52 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Knowledge fixer</h1>
+<h1 class="title">mk semi lattice</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8344aae">1. names</a></li>
-<li><a href="#org6ab97fa">2. semi_lattice dev. todos<code>[6/7]</code></a></li>
-<li><a href="#orgd2807ea">3. dir structures</a></li>
-<li><a href="#org1bb81be">4. HyperCard</a></li>
-<li><a href="#org759fea5">5. ruby2d install</a></li>
-<li><a href="#orgb722008">6. rake mk_graph</a>
+<li><a href="#orgb85360a">1. install</a></li>
+<li><a href="#org0864de8">2. names</a></li>
+<li><a href="#org2c4597e">3. semi_lattice dev. todos<code>[7/7]</code></a></li>
+<li><a href="#org2a5d47d">4. dir structures</a></li>
+<li><a href="#orge6e854e">5. HyperCard</a></li>
+<li><a href="#org47bccc2">6. ruby2d install</a></li>
+<li><a href="#orgd371cf7">7. rake mk_graph</a>
 <ul>
-<li><a href="#orgabc757c">6.1. Usage</a></li>
-<li><a href="#orgadbadee">6.2. Description:</a></li>
+<li><a href="#org976f35c">7.1. Usage</a></li>
+<li><a href="#org2ebdfe2">7.2. Description:</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8344aae" class="outline-2">
-<h2 id="org8344aae"><span class="section-number-2">1.</span> names</h2>
+<div id="outline-container-orgb85360a" class="outline-2">
+<h2 id="orgb85360a"><span class="section-number-2">1.</span> install</h2>
 <div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>cd multi_scale_25f</li>
+<li>git stash</li>
+<li>git pull origin main</li>
+<li>cat w5_mk_semi_lattice/readme.org</li>
+</ul>
+
+<p>
+see ** ruby2d install
+</p>
+
+<ul class="org-ul">
+<li>cp bin/linux_bins/wsl_ubuntu/open ~/bin</li>
+<li>cd</li>
+<li>git clone git@github.com:daddygongon/mk_semi_lattice.git</li>
+<li>cd mk_semi_lattice</li>
+<li>sudo rake install:local</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0864de8" class="outline-2">
+<h2 id="org0864de8"><span class="section-number-2">2.</span> names</h2>
+<div class="outline-text-2" id="text-2">
 <dl class="org-dl">
 <dt>hyper_card</dt><dd>B5ベースの知識集約カードシステム</dd>
 <dt>semi_lattice</dt><dd>ruby2dで作る新しいリンク表示</dd>
@@ -88,12 +112,11 @@
 </dl>
 </div>
 </div>
-<div id="outline-container-org6ab97fa" class="outline-2">
-<h2 id="org6ab97fa"><span class="section-number-2">2.</span> semi_lattice dev. todos<code>[6/7]</code></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org2c4597e" class="outline-2">
+<h2 id="org2c4597e"><span class="section-number-2">3.</span> semi_lattice dev. todos<code>[7/7]</code></h2>
+<div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li class="on"><code>[X]</code> archivesの完結</li>
-<li class="off"><code>[&#xa0;]</code> dir構成をAI提案</li>
 <li class="on"><code>[X]</code> semi_lattice定着
 <ul class="org-ul">
 <li>リゾーム？, nodeではなくedgeに意味あり</li>
@@ -102,21 +125,22 @@
 <li class="on"><code>[X]</code> bin化(mk_semi_lattice)</li>
 <li class="on"><code>[X]</code> dirのドット化
 <ul class="org-ul">
-<li>.dir_yaml/
+<li>.semi_lattice/
 <ul class="org-ul">
 <li>dir.yaml</li>
 <li>dir_node_edge.yaml</li>
 <li>dir_semi_lattice.yaml</li>
+<li>semi_lattice.yaml</li>
 </ul></li>
 </ul></li>
 <li class="on"><code>[X]</code> link化</li>
-<li class="off"><code>[&#xa0;]</code> windows&#x2026;</li>
+<li class="on"><code>[X]</code> windows&#x2026;</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2807ea" class="outline-2">
-<h2 id="orgd2807ea"><span class="section-number-2">3.</span> dir structures</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org2a5d47d" class="outline-2">
+<h2 id="org2a5d47d"><span class="section-number-2">4.</span> dir structures</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>dir構成をAI提案</li>
 <li>semi lattice rules
@@ -148,9 +172,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org1bb81be" class="outline-2">
-<h2 id="org1bb81be"><span class="section-number-2">4.</span> HyperCard</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orge6e854e" class="outline-2">
+<h2 id="orge6e854e"><span class="section-number-2">5.</span> HyperCard</h2>
+<div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>PreHyperCard
 <ul class="org-ul">
@@ -190,9 +214,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org759fea5" class="outline-2">
-<h2 id="org759fea5"><span class="section-number-2">5.</span> ruby2d install</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org47bccc2" class="outline-2">
+<h2 id="org47bccc2"><span class="section-number-2">6.</span> ruby2d install</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 only for win11.
 </p>
@@ -215,13 +239,13 @@ sudo gem install ruby2d
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb722008" class="outline-2">
-<h2 id="orgb722008"><span class="section-number-2">6.</span> rake mk_graph</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgd371cf7" class="outline-2">
+<h2 id="orgd371cf7"><span class="section-number-2">7.</span> rake mk_graph</h2>
+<div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgabc757c" class="outline-3">
-<h3 id="orgabc757c"><span class="section-number-3">6.1.</span> Usage</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-org976f35c" class="outline-3">
+<h3 id="org976f35c"><span class="section-number-3">7.1.</span> Usage</h3>
+<div class="outline-text-3" id="text-7-1">
 <ul class="org-ul">
 <li>rake mk_graph</li>
 </ul>
@@ -232,9 +256,9 @@ sudo gem install ruby2d
 </p>
 </div>
 </div>
-<div id="outline-container-orgadbadee" class="outline-3">
-<h3 id="orgadbadee"><span class="section-number-3">6.2.</span> Description:</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-org2ebdfe2" class="outline-3">
+<h3 id="org2ebdfe2"><span class="section-number-3">7.2.</span> Description:</h3>
+<div class="outline-text-3" id="text-7-2">
 <ol class="org-ol">
 <li>'ruby codes/mk_dir_array.rb -L 2 .'
 <ul class="org-ul">
@@ -255,7 +279,7 @@ sudo gem install ruby2d
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Shigeto R. Nishitani</p>
-<p class="date">Created: 2025-10-20 Mon 18:00</p>
+<p class="date">Created: 2025-10-21 Tue 17:50</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
