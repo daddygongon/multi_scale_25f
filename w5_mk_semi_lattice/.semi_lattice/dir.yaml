@@ -1,5 +1,8 @@
 ---
 w5_mk_semi_lattice/:
+  yaml_pipes/:
+    semi_lattice.yaml~:
+    semi_lattice.yaml:
   current_code: "-> ./archives/s6_whole_steps/"
   hyper_card/:
     semi_lattice.yaml:

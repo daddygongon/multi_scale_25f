@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
 <head>
-<!-- 2025-10-20 Mon 18:39 -->
+<!-- 2025-10-21 Tue 06:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>multi-scale simulation 25f</title>
@@ -27,87 +27,85 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org38d6a57">1. links</a></li>
-<li><a href="#org2f15c9c">2. future weeks</a>
+<li><a href="#orgdf625a2">1. links</a></li>
+<li><a href="#org79ac1a0">2. future weeks</a>
 <ul>
-<li><a href="#org5cd841c">2.1. chat_format</a></li>
+<li><a href="#org9ebe617">2.1. chat_format</a></li>
+<li><a href="#orge36f983">2.2. bundle</a></li>
+<li><a href="#org36a692c">2.3. w_commands</a></li>
 </ul>
 </li>
-<li><a href="#org8c5bb44">3. w5(10/22), mk_semi_lattice</a>
+<li><a href="#org935ee4f">3. w5(10/22), mk_semi_lattice</a></li>
+<li><a href="#org5f57016">4. w4, git clone, auto_git</a>
 <ul>
-<li><a href="#org1debfde">3.1. bundle</a></li>
+<li><a href="#org439fd49">4.1. git clone</a></li>
+<li><a href="#org5bea5a0">4.2. auto_git</a></li>
 </ul>
 </li>
-<li><a href="#org6cdeb65">4. w4, git clone, auto_git</a>
+<li><a href="#orgdc570cc">5. w3_system 連携</a>
 <ul>
-<li><a href="#orgdd6a21c">4.1. git clone</a></li>
-<li><a href="#org9eefa52">4.2. auto_git</a></li>
+<li><a href="#org81424ae">5.1. github + ssh</a></li>
 </ul>
 </li>
-<li><a href="#org543cd00">5. w3_system 連携</a>
+<li><a href="#org43168b2">6. w2 Ruby - mk_passwd , code + copilot + 実行</a>
 <ul>
-<li><a href="#org5517539">5.1. github + ssh</a></li>
+<li><a href="#orga8c7358">6.1. install ?</a></li>
+<li><a href="#orgc78bf49">6.2. copilot設定</a></li>
+<li><a href="#orgfa1370c">6.3. mk_passwd</a></li>
 </ul>
 </li>
-<li><a href="#orgfa9d3b9">6. w2 Ruby - mk_passwd , code + copilot + 実行</a>
+<li><a href="#orge15025d">7. w1 introduction</a>
 <ul>
-<li><a href="#org60d47ab">6.1. install ?</a></li>
-<li><a href="#org2d8a247">6.2. copilot設定</a></li>
-<li><a href="#org231be98">6.3. mk_passwd</a></li>
+<li><a href="#orgf8a325f">7.1. linux = filesをchunkingするためのsystem</a>
+<ul>
+<li><a href="#orgd0632d0">wsl+ubuntu+fish for windows</a></li>
+<li><a href="#orgcf80ed3">command, options</a></li>
 </ul>
 </li>
-<li><a href="#org713c92d">7. w1 introduction</a>
+<li><a href="#orgf3ee848">7.2. 記憶力テスト<span class="timestamp-wrapper"><span class="timestamp">&lt;2025-09-02 Tue&gt;</span></span></a>
 <ul>
-<li><a href="#orgf1c7aa4">7.1. linux = filesをchunkingするためのsystem</a>
-<ul>
-<li><a href="#org3dd53e6">wsl+ubuntu+fish for windows</a></li>
-<li><a href="#orgd5dbf46">command, options</a></li>
+<li><a href="#org4586dd1">chunking</a></li>
+<li><a href="#org3042797">記憶力テスト</a></li>
+<li><a href="#orgbdfd990">HyperCard = stackとdisplay</a></li>
 </ul>
 </li>
-<li><a href="#org5959f69">7.2. 記憶力テスト<span class="timestamp-wrapper"><span class="timestamp">&lt;2025-09-02 Tue&gt;</span></span></a>
-<ul>
-<li><a href="#orgfd19b1e">chunking</a></li>
-<li><a href="#orga8976b7">記憶力テスト</a></li>
-<li><a href="#org7ceef1d">HyperCard = stackとdisplay</a></li>
+<li><a href="#org611e1f5">7.3. vscode + copilot</a></li>
 </ul>
 </li>
-<li><a href="#org2e2bd2b">7.3. vscode + copilot</a></li>
+<li><a href="#org1f9f57a">8. github 共有の掟</a>
+<ul>
+<li><a href="#orgb53cdc2">8.1. github + ssh</a></li>
+<li><a href="#org130e81e">8.2. git, add, commit, pull, push</a></li>
+<li><a href="#org9982f12">8.3. ruby</a></li>
+<li><a href="#org6d68d11">8.4. gem</a></li>
+<li><a href="#org13d9e95">8.5. pull request</a></li>
+<li><a href="#orgc9f756f">8.6. my_help</a></li>
 </ul>
 </li>
-<li><a href="#org7f805af">8. github 共有の掟</a>
+<li><a href="#org4cc34fd">9. プログラミング言語</a>
 <ul>
-<li><a href="#orga619591">8.1. github + ssh</a></li>
-<li><a href="#org33d9324">8.2. git, add, commit, pull, push</a></li>
-<li><a href="#orgde12a97">8.3. ruby</a></li>
-<li><a href="#orgd5d91b1">8.4. gem</a></li>
-<li><a href="#org57441c4">8.5. pull request</a></li>
-<li><a href="#orgbacf476">8.6. my_help</a></li>
+<li><a href="#org37a6cff">9.1. vscode, chatGPT</a></li>
+<li><a href="#orgafd11e8">9.2. puts</a></li>
+<li><a href="#orgf91a85d">9.3. variable = name</a></li>
+<li><a href="#org72ff3e9">9.4. array, hash</a></li>
+<li><a href="#org8c45677">9.5. loop</a></li>
+<li><a href="#org49a8c54">9.6. if-else, case</a></li>
+<li><a href="#orga55b500">9.7. method, argument</a></li>
+<li><a href="#org9a3c3a2">9.8. class</a></li>
 </ul>
 </li>
-<li><a href="#orgad11995">9. プログラミング言語</a>
+<li><a href="#org9a156fb">10. preparations</a>
 <ul>
-<li><a href="#org508ac08">9.1. vscode, chatGPT</a></li>
-<li><a href="#org7710a6f">9.2. puts</a></li>
-<li><a href="#org0a8a458">9.3. variable = name</a></li>
-<li><a href="#org6df6896">9.4. array, hash</a></li>
-<li><a href="#orgc2849ee">9.5. loop</a></li>
-<li><a href="#org76f3fbb">9.6. if-else, case</a></li>
-<li><a href="#org491187e">9.7. method, argument</a></li>
-<li><a href="#orgff0148b">9.8. class</a></li>
-</ul>
-</li>
-<li><a href="#org164abc1">10. preparations</a>
-<ul>
-<li><a href="#org4e64f2a">10.1. objectives</a></li>
-<li><a href="#orge1fc2f9">10.2. copilot謹製</a></li>
-<li><a href="#org29b5562">10.3. original</a></li>
+<li><a href="#org3e9b735">10.1. objectives</a></li>
+<li><a href="#org91a195b">10.2. copilot謹製</a></li>
+<li><a href="#orgc21efde">10.3. original</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org38d6a57" class="outline-2">
-<h2 id="org38d6a57"><span class="section-number-2">1.</span> links</h2>
+<div id="outline-container-orgdf625a2" class="outline-2">
+<h2 id="orgdf625a2"><span class="section-number-2">1.</span> links</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><a href="https://kwanseio365-my.sharepoint.com/:f:/g/personal/cru32369_nuc_kwansei_ac_jp/EuUyUic5wypHkIxs5ZcRoIIBNGhlPyYYDkmEKFX5aO8vnA?e=xFpMed">動画他資料</a></li>
@@ -119,21 +117,33 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org2f15c9c" class="outline-2">
-<h2 id="org2f15c9c"><span class="section-number-2">2.</span> future weeks</h2>
+<div id="outline-container-org79ac1a0" class="outline-2">
+<h2 id="org79ac1a0"><span class="section-number-2">2.</span> future weeks</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org5cd841c" class="outline-3">
-<h3 id="org5cd841c"><span class="section-number-3">2.1.</span> chat_format</h3>
+<div id="outline-container-org9ebe617" class="outline-3">
+<h3 id="org9ebe617"><span class="section-number-3">2.1.</span> chat_format</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>bin/chat_format</li>
 </ul>
 </div>
 </div>
+<div id="outline-container-orge36f983" class="outline-3">
+<h3 id="orge36f983"><span class="section-number-3">2.2.</span> bundle</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>gem install bundler</li>
+<li>bundle gem mk_semi_lattice &#x2013;test=minitest &#x2013;exe</li>
+</ul>
 </div>
-<div id="outline-container-org8c5bb44" class="outline-2">
-<h2 id="org8c5bb44"><span class="section-number-2">3.</span> w5(10/22), mk_semi_lattice</h2>
+</div>
+<div id="outline-container-org36a692c" class="outline-3">
+<h3 id="org36a692c"><span class="section-number-3">2.3.</span> w_commands</h3>
+</div>
+</div>
+<div id="outline-container-org935ee4f" class="outline-2">
+<h2 id="org935ee4f"><span class="section-number-2">3.</span> w5(10/22), mk_semi_lattice</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><a href="https://github.com/daddygongon/mk_semi_lattice">mk_semi_lattice</a></li>
@@ -142,22 +152,13 @@
 <li>rake install:local</li>
 </ul>
 </div>
-<div id="outline-container-org1debfde" class="outline-3">
-<h3 id="org1debfde"><span class="section-number-3">3.1.</span> bundle</h3>
-<div class="outline-text-3" id="text-3-1">
-<ul class="org-ul">
-<li>gem install bundler</li>
-<li>bundle gem mk_semi_lattice &#x2013;test=minitest &#x2013;exe</li>
-</ul>
 </div>
-</div>
-</div>
-<div id="outline-container-org6cdeb65" class="outline-2">
-<h2 id="org6cdeb65"><span class="section-number-2">4.</span> w4, git clone, auto_git</h2>
+<div id="outline-container-org5f57016" class="outline-2">
+<h2 id="org5f57016"><span class="section-number-2">4.</span> w4, git clone, auto_git</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgdd6a21c" class="outline-3">
-<h3 id="orgdd6a21c"><span class="section-number-3">4.1.</span> git clone</h3>
+<div id="outline-container-org439fd49" class="outline-3">
+<h3 id="org439fd49"><span class="section-number-3">4.1.</span> git clone</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 sshでremote loginが可能になるように設定します．
@@ -175,8 +176,8 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-org9eefa52" class="outline-3">
-<h3 id="org9eefa52"><span class="section-number-3">4.2.</span> auto_git</h3>
+<div id="outline-container-org5bea5a0" class="outline-3">
+<h3 id="org5bea5a0"><span class="section-number-3">4.2.</span> auto_git</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>history/auto_git~orig</li>
@@ -184,8 +185,8 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-org543cd00" class="outline-2">
-<h2 id="org543cd00"><span class="section-number-2">5.</span> w3_system 連携</h2>
+<div id="outline-container-orgdc570cc" class="outline-2">
+<h2 id="orgdc570cc"><span class="section-number-2">5.</span> w3_system 連携</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 まずはsystem連携の基本です．
@@ -197,8 +198,8 @@ sshでremote loginが可能になるように設定します．
 それの拡張です．振る舞いをoptionで調整する．
 </p>
 </div>
-<div id="outline-container-org5517539" class="outline-3">
-<h3 id="org5517539"><span class="section-number-3">5.1.</span> github + ssh</h3>
+<div id="outline-container-org81424ae" class="outline-3">
+<h3 id="org81424ae"><span class="section-number-3">5.1.</span> github + ssh</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>chmod</li>
@@ -208,18 +209,18 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa9d3b9" class="outline-2">
-<h2 id="orgfa9d3b9"><span class="section-number-2">6.</span> w2 Ruby - mk_passwd , code + copilot + 実行</h2>
+<div id="outline-container-org43168b2" class="outline-2">
+<h2 id="org43168b2"><span class="section-number-2">6.</span> w2 Ruby - mk_passwd , code + copilot + 実行</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org60d47ab" class="outline-3">
-<h3 id="org60d47ab"><span class="section-number-3">6.1.</span> install ?</h3>
+<div id="outline-container-orga8c7358" class="outline-3">
+<h3 id="orga8c7358"><span class="section-number-3">6.1.</span> install ?</h3>
 </div>
-<div id="outline-container-org2d8a247" class="outline-3">
-<h3 id="org2d8a247"><span class="section-number-3">6.2.</span> copilot設定</h3>
+<div id="outline-container-orgc78bf49" class="outline-3">
+<h3 id="orgc78bf49"><span class="section-number-3">6.2.</span> copilot設定</h3>
 </div>
-<div id="outline-container-org231be98" class="outline-3">
-<h3 id="org231be98"><span class="section-number-3">6.3.</span> mk_passwd</h3>
+<div id="outline-container-orgfa1370c" class="outline-3">
+<h3 id="orgfa1370c"><span class="section-number-3">6.3.</span> mk_passwd</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li>ask</li>
@@ -229,17 +230,17 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-org713c92d" class="outline-2">
-<h2 id="org713c92d"><span class="section-number-2">7.</span> w1 introduction</h2>
+<div id="outline-container-orge15025d" class="outline-2">
+<h2 id="orge15025d"><span class="section-number-2">7.</span> w1 introduction</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgf1c7aa4" class="outline-3">
-<h3 id="orgf1c7aa4"><span class="section-number-3">7.1.</span> linux = filesをchunkingするためのsystem</h3>
+<div id="outline-container-orgf8a325f" class="outline-3">
+<h3 id="orgf8a325f"><span class="section-number-3">7.1.</span> linux = filesをchunkingするためのsystem</h3>
 <div class="outline-text-3" id="text-7-1">
 </div>
-<div id="outline-container-org3dd53e6" class="outline-4">
-<h4 id="org3dd53e6">wsl+ubuntu+fish for windows</h4>
-<div class="outline-text-4" id="text-org3dd53e6">
+<div id="outline-container-orgd0632d0" class="outline-4">
+<h4 id="orgd0632d0">wsl+ubuntu+fish for windows</h4>
+<div class="outline-text-4" id="text-orgd0632d0">
 <ul class="org-ul">
 <li>path, directory</li>
 <li>directory操作</li>
@@ -249,9 +250,9 @@ sshでremote loginが可能になるように設定します．
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd5dbf46" class="outline-4">
-<h4 id="orgd5dbf46">command, options</h4>
-<div class="outline-text-4" id="text-orgd5dbf46">
+<div id="outline-container-orgcf80ed3" class="outline-4">
+<h4 id="orgcf80ed3">command, options</h4>
+<div class="outline-text-4" id="text-orgcf80ed3">
 <ul class="org-ul">
 <li>cli(command line interface)</li>
 <li>order -short_options &#x2013;long_option</li>
@@ -259,19 +260,19 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-org5959f69" class="outline-3">
-<h3 id="org5959f69"><span class="section-number-3">7.2.</span> 記憶力テスト<span class="timestamp-wrapper"><span class="timestamp">&lt;2025-09-02 Tue&gt;</span></span></h3>
+<div id="outline-container-orgf3ee848" class="outline-3">
+<h3 id="orgf3ee848"><span class="section-number-3">7.2.</span> 記憶力テスト<span class="timestamp-wrapper"><span class="timestamp">&lt;2025-09-02 Tue&gt;</span></span></h3>
 <div class="outline-text-3" id="text-7-2">
 </div>
-<div id="outline-container-orgfd19b1e" class="outline-4">
-<h4 id="orgfd19b1e">chunking</h4>
+<div id="outline-container-org4586dd1" class="outline-4">
+<h4 id="org4586dd1">chunking</h4>
 </div>
-<div id="outline-container-orga8976b7" class="outline-4">
-<h4 id="orga8976b7">記憶力テスト</h4>
+<div id="outline-container-org3042797" class="outline-4">
+<h4 id="org3042797">記憶力テスト</h4>
 </div>
-<div id="outline-container-org7ceef1d" class="outline-4">
-<h4 id="org7ceef1d">HyperCard = stackとdisplay</h4>
-<div class="outline-text-4" id="text-org7ceef1d">
+<div id="outline-container-orgbdfd990" class="outline-4">
+<h4 id="orgbdfd990">HyperCard = stackとdisplay</h4>
+<div class="outline-text-4" id="text-orgbdfd990">
 <ul class="org-ul">
 <li>text -&gt; figs</li>
 <li>.md(mark down text), markup言語</li>
@@ -282,8 +283,8 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-org2e2bd2b" class="outline-3">
-<h3 id="org2e2bd2b"><span class="section-number-3">7.3.</span> vscode + copilot</h3>
+<div id="outline-container-org611e1f5" class="outline-3">
+<h3 id="org611e1f5"><span class="section-number-3">7.3.</span> vscode + copilot</h3>
 <div class="outline-text-3" id="text-7-3">
 <ul class="org-ul">
 <li>copilotが無料利用可能
@@ -295,64 +296,64 @@ sshでremote loginが可能になるように設定します．
 </div>
 </div>
 </div>
-<div id="outline-container-org7f805af" class="outline-2">
-<h2 id="org7f805af"><span class="section-number-2">8.</span> github 共有の掟</h2>
+<div id="outline-container-org1f9f57a" class="outline-2">
+<h2 id="org1f9f57a"><span class="section-number-2">8.</span> github 共有の掟</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-orga619591" class="outline-3">
-<h3 id="orga619591"><span class="section-number-3">8.1.</span> github + ssh</h3>
+<div id="outline-container-orgb53cdc2" class="outline-3">
+<h3 id="orgb53cdc2"><span class="section-number-3">8.1.</span> github + ssh</h3>
 </div>
-<div id="outline-container-org33d9324" class="outline-3">
-<h3 id="org33d9324"><span class="section-number-3">8.2.</span> git, add, commit, pull, push</h3>
+<div id="outline-container-org130e81e" class="outline-3">
+<h3 id="org130e81e"><span class="section-number-3">8.2.</span> git, add, commit, pull, push</h3>
 </div>
-<div id="outline-container-orgde12a97" class="outline-3">
-<h3 id="orgde12a97"><span class="section-number-3">8.3.</span> ruby</h3>
+<div id="outline-container-org9982f12" class="outline-3">
+<h3 id="org9982f12"><span class="section-number-3">8.3.</span> ruby</h3>
 </div>
-<div id="outline-container-orgd5d91b1" class="outline-3">
-<h3 id="orgd5d91b1"><span class="section-number-3">8.4.</span> gem</h3>
+<div id="outline-container-org6d68d11" class="outline-3">
+<h3 id="org6d68d11"><span class="section-number-3">8.4.</span> gem</h3>
 </div>
-<div id="outline-container-org57441c4" class="outline-3">
-<h3 id="org57441c4"><span class="section-number-3">8.5.</span> pull request</h3>
+<div id="outline-container-org13d9e95" class="outline-3">
+<h3 id="org13d9e95"><span class="section-number-3">8.5.</span> pull request</h3>
 </div>
-<div id="outline-container-orgbacf476" class="outline-3">
-<h3 id="orgbacf476"><span class="section-number-3">8.6.</span> my_help</h3>
+<div id="outline-container-orgc9f756f" class="outline-3">
+<h3 id="orgc9f756f"><span class="section-number-3">8.6.</span> my_help</h3>
 </div>
 </div>
-<div id="outline-container-orgad11995" class="outline-2">
-<h2 id="orgad11995"><span class="section-number-2">9.</span> プログラミング言語</h2>
+<div id="outline-container-org4cc34fd" class="outline-2">
+<h2 id="org4cc34fd"><span class="section-number-2">9.</span> プログラミング言語</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org508ac08" class="outline-3">
-<h3 id="org508ac08"><span class="section-number-3">9.1.</span> vscode, chatGPT</h3>
+<div id="outline-container-org37a6cff" class="outline-3">
+<h3 id="org37a6cff"><span class="section-number-3">9.1.</span> vscode, chatGPT</h3>
 </div>
-<div id="outline-container-org7710a6f" class="outline-3">
-<h3 id="org7710a6f"><span class="section-number-3">9.2.</span> puts</h3>
+<div id="outline-container-orgafd11e8" class="outline-3">
+<h3 id="orgafd11e8"><span class="section-number-3">9.2.</span> puts</h3>
 </div>
-<div id="outline-container-org0a8a458" class="outline-3">
-<h3 id="org0a8a458"><span class="section-number-3">9.3.</span> variable = name</h3>
+<div id="outline-container-orgf91a85d" class="outline-3">
+<h3 id="orgf91a85d"><span class="section-number-3">9.3.</span> variable = name</h3>
 </div>
-<div id="outline-container-org6df6896" class="outline-3">
-<h3 id="org6df6896"><span class="section-number-3">9.4.</span> array, hash</h3>
+<div id="outline-container-org72ff3e9" class="outline-3">
+<h3 id="org72ff3e9"><span class="section-number-3">9.4.</span> array, hash</h3>
 </div>
-<div id="outline-container-orgc2849ee" class="outline-3">
-<h3 id="orgc2849ee"><span class="section-number-3">9.5.</span> loop</h3>
+<div id="outline-container-org8c45677" class="outline-3">
+<h3 id="org8c45677"><span class="section-number-3">9.5.</span> loop</h3>
 </div>
-<div id="outline-container-org76f3fbb" class="outline-3">
-<h3 id="org76f3fbb"><span class="section-number-3">9.6.</span> if-else, case</h3>
+<div id="outline-container-org49a8c54" class="outline-3">
+<h3 id="org49a8c54"><span class="section-number-3">9.6.</span> if-else, case</h3>
 </div>
-<div id="outline-container-org491187e" class="outline-3">
-<h3 id="org491187e"><span class="section-number-3">9.7.</span> method, argument</h3>
+<div id="outline-container-orga55b500" class="outline-3">
+<h3 id="orga55b500"><span class="section-number-3">9.7.</span> method, argument</h3>
 </div>
-<div id="outline-container-orgff0148b" class="outline-3">
-<h3 id="orgff0148b"><span class="section-number-3">9.8.</span> class</h3>
+<div id="outline-container-org9a3c3a2" class="outline-3">
+<h3 id="org9a3c3a2"><span class="section-number-3">9.8.</span> class</h3>
 </div>
 </div>
-<div id="outline-container-org164abc1" class="outline-2">
-<h2 id="org164abc1"><span class="section-number-2">10.</span> preparations</h2>
+<div id="outline-container-org9a156fb" class="outline-2">
+<h2 id="org9a156fb"><span class="section-number-2">10.</span> preparations</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-org4e64f2a" class="outline-3">
-<h3 id="org4e64f2a"><span class="section-number-3">10.1.</span> objectives</h3>
+<div id="outline-container-org3e9b735" class="outline-3">
+<h3 id="org3e9b735"><span class="section-number-3">10.1.</span> objectives</h3>
 <div class="outline-text-3" id="text-10-1">
 <ul class="org-ul">
 <li>Linux</li>
@@ -361,8 +362,8 @@ sshでremote loginが可能になるように設定します．
 </ul>
 </div>
 </div>
-<div id="outline-container-orge1fc2f9" class="outline-3">
-<h3 id="orge1fc2f9"><span class="section-number-3">10.2.</span> copilot謹製</h3>
+<div id="outline-container-org91a195b" class="outline-3">
+<h3 id="org91a195b"><span class="section-number-3">10.2.</span> copilot謹製</h3>
 <div class="outline-text-3" id="text-10-2">
 <ul class="org-ul">
 <li>むずい</li>
@@ -371,8 +372,8 @@ sshでremote loginが可能になるように設定します．
 </ul>
 </div>
 </div>
-<div id="outline-container-org29b5562" class="outline-3">
-<h3 id="org29b5562"><span class="section-number-3">10.3.</span> original</h3>
+<div id="outline-container-orgc21efde" class="outline-3">
+<h3 id="orgc21efde"><span class="section-number-3">10.3.</span> original</h3>
 <div class="outline-text-3" id="text-10-3">
 <ul class="org-ul">
 <li>簡易版</li>
@@ -392,7 +393,7 @@ sshでremote loginが可能になるように設定します．
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Shigeto R. Nishitani</p>
-<p class="date">Created: 2025-10-20 Mon 18:39</p>
+<p class="date">Created: 2025-10-21 Tue 06:49</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

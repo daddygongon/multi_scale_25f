@@ -31,8 +31,8 @@ def traverse(node, parent_id, nodes, edges, id_counter, id_name_map)
   end
 end
 
-input_path = File.join(File.dirname(__FILE__), 'dir.yaml')
-output_path = File.join(File.dirname(__FILE__), 'dir_node_edge.yaml')
+input_path = 'dir.yaml'
+output_path = 'dir_node_edge.yaml'
 
 dir_tree = YAML.load_file(input_path)
 nodes = []

@@ -4,78 +4,78 @@
   :name: HyperCard/
   :type: dir
   :file_path:
-  :x: 394
-  :y: 309
+  :x: 229
+  :y: 206
   :fixed: true
 - :id: 2
   :name: 知識の構造(ツリーではない)--qiita/
   :type: dir
   :file_path: https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53
-  :x: 387
-  :y: 179
+  :x: 421
+  :y: 206
   :fixed: true
 - :id: 3
   :name: Tree==MindMap
   :type: file
   :file_path:
-  :x: 438
-  :y: 130
+  :x: 479
+  :y: 163
   :fixed: true
 - :id: 4
   :name: chunking(7\pm2)
   :type: file
   :file_path: "../../w1_chunk/w1_chunk.key"
-  :x: 479
-  :y: 370
+  :x: 359
+  :y: 339
   :fixed: true
 - :id: 5
   :name: 知的生産の技術(梅棹)/
   :type: dir
   :file_path:
-  :x: 131
-  :y: 141
+  :x: 345
+  :y: 106
   :fixed: true
 - :id: 6
   :name: 京大(B5)カード, 記憶の代わりに記録
   :type: file
   :file_path:
-  :x: 196
-  :y: 89
+  :x: 374
+  :y: 46
   :fixed: true
 - :id: 7
   :name: toggle表示/
   :type: dir
   :file_path:
-  :x: 346
-  :y: 369
+  :x: 198
+  :y: 344
   :fixed: true
 - :id: 8
   :name: enCapsule(隠蔽)
   :type: file
   :file_path:
-  :x: 356.61863839265186
-  :y: 455.6844646116974
+  :x: 213.2224846934479
+  :y: 433.0917083675818
   :fixed: false
 - :id: 9
   :name: object指向(思考)/
   :type: dir
   :file_path:
-  :x: 428
-  :y: 506
+  :x: 280
+  :y: 494
   :fixed: true
 - :id: 10
   :name: Inherit(遺産継承)
   :type: file
   :file_path:
-  :x: 504.15841227566864
-  :y: 468.2522021880842
+  :x: 363.84515362527605
+  :y: 480.03611037160994
   :fixed: false
 - :id: 11
   :name: PolyMorph(多形, morpheme, phoneme)
   :type: file
   :file_path:
-  :x: 473.65738378102856
-  :y: 577.6966059606164
+  :x: 246.67382446430284
+  :y: 572.1944117195335
   :fixed: false
 :edges:
 - :from: 1

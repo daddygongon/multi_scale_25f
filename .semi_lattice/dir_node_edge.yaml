@@ -9,83 +9,69 @@ nodes:
   type: dir
   file_path: "./w5_mk_semi_lattice"
 - id: 3
-  name: index.html
-  type: file
-  file_path: "./index.html"
-- id: 4
-  name: r1_git_setup.md
-  type: file
-  file_path: "./r1_git_setup.md"
-- id: 5
   name: bin/
   type: dir
   file_path: "./bin"
-- id: 6
+- id: 4
   name: references/
   type: dir
   file_path: "./references"
-- id: 7
+- id: 5
   name: w3_mk_passwd_optparse/
   type: dir
   file_path: "./w3_mk_passwd_optparse"
-- id: 8
+- id: 6
   name: readme.html
   type: file
   file_path: "./readme.html"
-- id: 9
+- id: 7
   name: w2_mk_passwd/
   type: dir
   file_path: "./w2_mk_passwd"
-- id: 10
+- id: 8
   name: w4_ssh_my_help/
   type: dir
   file_path: "./w4_ssh_my_help"
-- id: 11
+- id: 9
   name: w1_chunk/
   type: dir
   file_path: "./w1_chunk"
-- id: 12
+- id: 10
+  name: w_commands/
+  type: dir
+  file_path: "./w_commands"
+- id: 11
   name: readme.org
   type: file
   file_path: "./readme.org"
-- id: 13
-  name: delta_diff.pptx
-  type: file
-  file_path: "./delta_diff.pptx"
 edges:
 - from: 1
   # from: multi_scale_25f/, to: w5_mk_semi_lattice/
   to: 2
 - from: 1
-  # from: multi_scale_25f/, to: index.html
+  # from: multi_scale_25f/, to: bin/
   to: 3
 - from: 1
-  # from: multi_scale_25f/, to: r1_git_setup.md
+  # from: multi_scale_25f/, to: references/
   to: 4
 - from: 1
-  # from: multi_scale_25f/, to: bin/
+  # from: multi_scale_25f/, to: w3_mk_passwd_optparse/
   to: 5
 - from: 1
-  # from: multi_scale_25f/, to: references/
+  # from: multi_scale_25f/, to: readme.html
   to: 6
 - from: 1
-  # from: multi_scale_25f/, to: w3_mk_passwd_optparse/
+  # from: multi_scale_25f/, to: w2_mk_passwd/
   to: 7
 - from: 1
-  # from: multi_scale_25f/, to: readme.html
+  # from: multi_scale_25f/, to: w4_ssh_my_help/
   to: 8
 - from: 1
-  # from: multi_scale_25f/, to: w2_mk_passwd/
+  # from: multi_scale_25f/, to: w1_chunk/
   to: 9
 - from: 1
-  # from: multi_scale_25f/, to: w4_ssh_my_help/
+  # from: multi_scale_25f/, to: w_commands/
   to: 10
 - from: 1
-  # from: multi_scale_25f/, to: w1_chunk/
-  to: 11
-- from: 1
   # from: multi_scale_25f/, to: readme.org
-  to: 12
-- from: 1
-  # from: multi_scale_25f/, to: delta_diff.pptx
-  to: 13
+  to: 11

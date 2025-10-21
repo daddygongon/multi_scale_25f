@@ -10,12 +10,20 @@ desc "mk knowledge fixer graph" #desc -> description
 task :mk_graph do # any name on task_name
   dir = ARGV[1] || '.'
   layer = ARGV[2] || '2'
-  ["ruby ./mk_dir_yaml.rb -L #{layer.to_i} #{dir}",
-   'ruby ./mk_node_edge.rb',
-   'ruby ./mk_semi_lattice.rb'].each do |comm|
+  ["ruby ./current_code/mk_dir_yaml.rb -L #{layer.to_i} #{dir}",
+   'ruby ./current_code/mk_node_edge.rb',
+   'ruby ./current_code/mk_semi_lattice.rb'].each do |comm|
     puts comm
     system comm
   end
+  exit
+end
+
+desc "tidy up dir, rm *.yaml" #desc -> description
+task :tidy do # any name on task_name
+  comm = 'rm -i *.yaml'
+  puts comm
+  system comm
   exit
 end
 

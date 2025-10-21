@@ -15,6 +15,10 @@
 * future weeks
 ** chat_format
 - bin/chat_format
+** bundle
+- gem install bundler
+- bundle gem mk_semi_lattice --test=minitest --exe
+** w_commands
 
 * w5(10/22), mk_semi_lattice
 - [[https://github.com/daddygongon/mk_semi_lattice][mk_semi_lattice]]
@@ -22,9 +26,6 @@
 - cd mk_semi_lattice
 - rake install:local
 
-** bundle
-- gem install bundler
-- bundle gem mk_semi_lattice --test=minitest --exe
 * w4, git clone, auto_git
 ** git clone
 sshでremote loginが可能になるように設定します．

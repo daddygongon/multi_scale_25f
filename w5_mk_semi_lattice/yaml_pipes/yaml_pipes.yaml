@@ -1,0 +1,7 @@
+---
+mk_dir_yaml.rb:
+  dir.yaml:
+    mk_node_edge.rb:
+      dir_node_edge.yaml:
+        mk_semi_lattice.rb:
+          semi_lattice:

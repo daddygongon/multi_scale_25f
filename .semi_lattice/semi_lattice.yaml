@@ -4,93 +4,79 @@
   :name: multi_scale_25f/
   :type: dir
   :file_path: "."
-  :x: 364
-  :y: 338
+  :x: 373
+  :y: 313
   :fixed: true
 - :id: 2
   :name: w5_mk_semi_lattice/
   :type: dir
   :file_path: "./w5_mk_semi_lattice"
-  :x: 606
-  :y: 372
+  :x: 534
+  :y: 379
   :fixed: true
 - :id: 3
-  :name: index.html
-  :type: file
-  :file_path: "./index.html"
-  :x: 439.61558569429036
-  :y: 376.823745312619
-  :fixed: true
-- :id: 4
-  :name: r1_git_setup.md
-  :type: file
-  :file_path: "./r1_git_setup.md"
-  :x: 385.02326773623366
-  :y: 255.64089477361574
-  :fixed: true
-- :id: 5
   :name: bin/
   :type: dir
   :file_path: "./bin"
-  :x: 279.02766449851043
-  :y: 335.83154446153594
+  :x: 263
+  :y: 464
   :fixed: true
-- :id: 6
+- :id: 4
   :name: references/
   :type: dir
   :file_path: "./references"
-  :x: 312.71641694115016
-  :y: 270.21361413494554
+  :x: 238
+  :y: 394
   :fixed: true
-- :id: 7
+- :id: 5
   :name: w3_mk_passwd_optparse/
   :type: dir
   :file_path: "./w3_mk_passwd_optparse"
-  :x: 512
-  :y: 180
+  :x: 530
+  :y: 257
   :fixed: true
-- :id: 8
+- :id: 6
   :name: readme.html
   :type: file
   :file_path: "./readme.html"
-  :x: 380.7951044474667
-  :y: 421.324212932154
+  :x: 233
+  :y: 270
   :fixed: true
-- :id: 9
+- :id: 7
   :name: w2_mk_passwd/
   :type: dir
   :file_path: "./w2_mk_passwd"
-  :x: 395
-  :y: 121
+  :x: 528
+  :y: 193
   :fixed: true
-- :id: 10
+- :id: 8
   :name: w4_ssh_my_help/
   :type: dir
   :file_path: "./w4_ssh_my_help"
-  :x: 614
-  :y: 273
+  :x: 534
+  :y: 314
   :fixed: true
-- :id: 11
+- :id: 9
   :name: w1_chunk/
   :type: dir
   :file_path: "./w1_chunk"
-  :x: 265
-  :y: 154
+  :x: 531
+  :y: 131
   :fixed: true
-- :id: 12
+- :id: 10
+  :name: w_commands/
+  :type: dir
+  :file_path: "./w_commands"
+  :x: 533
+  :y: 438
+  :fixed: true
+- :id: 11
   :name: readme.org
   :type: file
   :file_path: "./readme.org"
-  :x: 309.32566598199423
-  :y: 403.08238778415813
-  :fixed: false
-- :id: 13
-  :name: delta_diff.pptx
-  :type: file
-  :file_path: "./delta_diff.pptx"
-  :x: 441.498953633488
-  :y: 303.0870770958018
-  :fixed: false
+  :x: 308
+  :y: 220
+  :fixed: true
 :edges:
 - :from: 1
   :to: 2
@@ -112,7 +98,3 @@
   :to: 10
 - :from: 1
   :to: 11
-- :from: 1
-  :to: 12
-- :from: 1
-  :to: 13
