@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+puts "Usage:  tidy -r   "
+dirs = ( ARGV[0]=='-r' ) ? './**/*' : './*'
+Dir.glob(dirs).each{ |file|
+  # ~ *\# .*~ .*\# core *.log *.dvi *.aux pout.dat *.bak *.synctex.gz"
+  if file =~ /(.+~$)|(.+#$)|(.+\.log$)|(.+\.aux$)|(.+\.bak$)|(.+\.dvi$)|(.+\.synctex.gz$)|(.+\.out$)/
+    #FileUtils.rm(file, noop: true, verbose: true)
+    FileUtils.rm(file, verbose: true)
+  end
+}
+
