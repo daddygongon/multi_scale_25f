@@ -1,137 +1,151 @@
 ---
 :nodes:
 - :id: 1
-  :name: ARGV[0]
+  :name: 1:ARGV[0]
   :type: dir
   :file_path: "."
   :x: 69
   :y: 216
+  :color: orange
   :fixed: true
 - :id: 2
-  :name: nil
+  :name: 2:nil
   :type: file
   :file_path: "./nil"
   :x: 222
   :y: 83
+  :color: orange
   :fixed: true
 - :id: 3
-  :name: "."
+  :name: 3:.
   :type: dir
   :file_path: "."
   :x: 224
   :y: 206
+  :color: orange
   :fixed: true
 - :id: 4
-  :name: "./.semi_lattice"
+  :name: 4:./.semi_lattice
   :type: dir
   :file_path: ".semi_lattice"
   :x: 353
   :y: 143
+  :color: orange
   :fixed: true
 - :id: 5
-  :name: dir_tree.yaml
+  :name: 5:dir_tree.yaml
   :type: file
   :file_path: ".semi_lattice/dir_tree.yaml"
   :x: 442
   :y: 99
+  :color: orange
   :fixed: true
 - :id: 6
-  :name: dir_node_edge.yaml
+  :name: 6:dir_node_edge.yaml
   :type: file
   :file_path: ".semi_lattice/dir_node_edge.yaml"
   :x: 539
   :y: 148
+  :color: orange
   :fixed: true
 - :id: 7
-  :name: semi_lattice.yaml
+  :name: 7:semi_lattice.yaml
   :type: file
   :file_path: ".semi_lattice/semi_lattice.yaml"
   :x: 645
   :y: 212
+  :color: orange
   :fixed: true
 - :id: 8
-  :name: hoge_semi_lattice.yaml
+  :name: 8:hoge_semi_lattice.yaml
   :type: dir
   :file_path: "./hoge_semi_lattice.yaml"
   :x: 218
   :y: 439
+  :color: orange
   :fixed: true
 - :id: 9
-  :name: semi_lattice.yaml
+  :name: 9:semi_lattice.yaml
   :type: file
   :file_path: "./hoge_semi_lattice.yaml/semi_lattice.yaml"
   :x: 646
   :y: 549
+  :color: orange
   :fixed: true
 - :id: 10
-  :name: "-t hoge_tree.yaml"
+  :name: 10:-t hoge_tree.yaml
   :type: dir
   :file_path: "../-t hoge_tree.yaml"
   :x: 452
   :y: 233
+  :color: orange
   :fixed: true
 - :id: 11
-  :name: hoge_node_edge.yaml
+  :name: 11:hoge_node_edge.yaml
   :type: file
   :file_path: "../-t hoge_tree.yaml/hoge_node_edge.yaml"
   :x: 534
   :y: 304
+  :color: orange
   :fixed: true
 - :id: 12
-  :name: semi_lattice.yaml
+  :name: 12:semi_lattice.yaml
   :type: file
   :file_path: "../-t hoge_tree.yaml/semi_lattice.yaml"
   :x: 645
   :y: 349
+  :color: orange
   :fixed: true
 - :id: 13
-  :name: "-n hoge_node_ege.yaml"
+  :name: 13:-n hoge_node_ege.yaml
   :type: dir
   :file_path: "../-n hoge_node_ege.yaml"
   :x: 528
   :y: 400
+  :color: orange
   :fixed: true
 - :id: 14
-  :name: semi_lattice.yaml
+  :name: 14:semi_lattice.yaml
   :type: file
   :file_path: "../-n hoge_node_ege.yaml/semi_lattice.yaml"
   :x: 647
   :y: 456
+  :color: orange
   :fixed: true
 :edges:
 - :from: 1
-  # from: ARGV[0], to: nil
+  # from: 1:ARGV[0], to: 2:nil
   :to: 2
 - :from: 1
-  # from: ARGV[0], to: .
+  # from: 1:ARGV[0], to: 3:.
   :to: 3
 - :from: 3
-  # from: ., to: ./.semi_lattice
+  # from: 3:., to: 4:./.semi_lattice
   :to: 4
 - :from: 2
-  # from: nil, to: ./.semi_lattice
+  # from: 2:nil, to: 4:./.semi_lattice
   :to: 4
 - :from: 4
-  # from: ./.semi_lattice, to: dir_tree.yaml
+  # from: 4:./.semi_lattice, to: 5:dir_tree.yaml
   :to: 5
 - :from: 4
-  # from: ./.semi_lattice, to: dir_node_edge.yaml
+  # from: 4:./.semi_lattice, to: 6:dir_node_edge.yaml
   :to: 6
 - :from: 4
-  # from: ./.semi_lattice, to: semi_lattice.yaml
+  # from: 4:./.semi_lattice, to: 7:semi_lattice.yaml
   :to: 7
 - :from: 1
-  # from: ARGV[0], to: hoge_semi_lattice.yaml
+  # from: 1:ARGV[0], to: 8:hoge_semi_lattice.yaml
   :to: 8
 - :from: 8
-  # from: hoge_semi_lattice.yaml, to: semi_lattice.yaml
+  # from: 8:hoge_semi_lattice.yaml, to: 9:semi_lattice.yaml
   :to: 9
 - :from: 10
-  # from: -t hoge_tree.yaml, to: hoge_node_edge.yaml
+  # from: 10:-t hoge_tree.yaml, to: 11:hoge_node_edge.yaml
   :to: 11
 - :from: 10
-  # from: -t hoge_tree.yaml, to: semi_lattice.yaml
+  # from: 10:-t hoge_tree.yaml, to: 12:semi_lattice.yaml
   :to: 12
 - :from: 13
-  # from: -n hoge_node_ege.yaml, to: semi_lattice.yaml
+  # from: 13:-n hoge_node_ege.yaml, to: 14:semi_lattice.yaml
   :to: 14

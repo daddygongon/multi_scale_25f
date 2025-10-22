@@ -1,154 +1,63 @@
 ---
 :nodes:
 - :id: 1
-<<<<<<< HEAD
   :name: HyperCard/
-=======
-  :name: 1:HyperCard/
->>>>>>> 64f0010 (rev open for multiple files)
   :type: dir
-  :file_path:
+  :file_path: https://hcsimulator.com/
   :x: 229
   :y: 206
-<<<<<<< HEAD
-  :fixed: true
-- :id: 2
-  :name: 知識の構造(ツリーではない)--qiita/
-=======
   :color: orange
   :fixed: true
 - :id: 2
-  :name: 2:知識の構造(ツリーではない)--qiita/
->>>>>>> 64f0010 (rev open for multiple files)
+  :name: 知識の構造(ツリーではない)--qiita/
   :type: dir
   :file_path: https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53
   :x: 421
   :y: 206
-<<<<<<< HEAD
-  :fixed: true
-- :id: 3
-  :name: Tree==MindMap
-=======
   :color: orange
   :fixed: true
 - :id: 3
-  :name: 3:Tree==MindMap
->>>>>>> 64f0010 (rev open for multiple files)
+  :name: Tree==MindMap
   :type: file
   :file_path: "../knowledge_fixer.pdf"
   :x: 479
   :y: 163
-<<<<<<< HEAD
-  :fixed: true
-- :id: 4
-  :name: chunking(7\pm2)
-=======
   :color: orange
   :fixed: true
 - :id: 4
-  :name: 4:chunking(7\pm2)
->>>>>>> 64f0010 (rev open for multiple files)
+  :name: chunking(7\pm2)
   :type: file
   :file_path: "../../w1_chunk/w1_chunk.pdf"
   :x: 359
   :y: 339
-<<<<<<< HEAD
+  :color: orange
   :fixed: true
 - :id: 5
   :name: 知的生産の技術(梅棹)/
-=======
-  :color: orange
-  :fixed: true
-- :id: 5
-  :name: 5:知的生産の技術(梅棹)/
->>>>>>> 64f0010 (rev open for multiple files)
   :type: dir
-  :file_path:
+  :file_path: https://www.iwanami.co.jp/book/b267410.html
   :x: 345
   :y: 106
-<<<<<<< HEAD
+  :color: orange
   :fixed: true
 - :id: 6
   :name: 京大(B5)カード, 記憶の代わりに記録
-=======
-  :color: orange
-  :fixed: true
-- :id: 6
-  :name: 6:京大(B5)カード, 記憶の代わりに記録
->>>>>>> 64f0010 (rev open for multiple files)
   :type: file
-  :file_path:
+  :file_path: https://note.com/kappa_scp2511/n/nb10f29014958
   :x: 374
   :y: 46
-<<<<<<< HEAD
+  :color: orange
   :fixed: true
 - :id: 7
   :name: toggle表示/
-=======
-  :color: orange
-  :fixed: true
-- :id: 7
-  :name: 7:toggle表示/
->>>>>>> 64f0010 (rev open for multiple files)
   :type: dir
   :file_path:
   :x: 198
   :y: 344
-<<<<<<< HEAD
-  :fixed: true
-- :id: 8
-  :name: enCapsule(隠蔽)
-  :type: file
-  :file_path:
-  :x: 224.92638820374384
-  :y: 429.17486375010895
-  :fixed: false
-- :id: 9
-  :name: object指向(思考)/
-  :type: dir
-  :file_path:
-  :x: 301
-  :y: 476
-  :fixed: true
-- :id: 10
-  :name: Inherit(遺産継承)
-  :type: file
-  :file_path:
-  :x: 380.6273649579881
-  :y: 505.7402547038078
-  :fixed: false
-- :id: 11
-  :name: PolyMorph(多形, morpheme, phoneme)
-  :type: file
-  :file_path:
-  :x: 249.07536532160225
-  :y: 543.296599568737
-  :fixed: false
-:edges:
-- :from: 1
-  :to: 2
-- :from: 2
-  :to: 3
-- :from: 1
-  :to: 4
-- :from: 1
-  :to: 5
-- :from: 5
-  :to: 6
-- :from: 1
-  :to: 7
-- :from: 7
-  :to: 8
-- :from: 8
-  :to: 9
-- :from: 9
-  :to: 10
-- :from: 9
-=======
   :color: orange
   :fixed: true
 - :id: 8
-  :name: 8:enCapsule(隠蔽)
+  :name: enCapsule(隠蔽)
   :type: file
   :file_path:
   :x: 213.2224846934479
@@ -156,7 +65,7 @@
   :color: orange
   :fixed: false
 - :id: 9
-  :name: 9:object指向(思考)/
+  :name: object指向(思考)/
   :type: dir
   :file_path:
   :x: 280
@@ -164,7 +73,7 @@
   :color: orange
   :fixed: true
 - :id: 10
-  :name: 10:Inherit(遺産継承)
+  :name: Inherit(遺産継承)
   :type: file
   :file_path:
   :x: 363.84515362527605
@@ -172,7 +81,7 @@
   :color: orange
   :fixed: false
 - :id: 11
-  :name: 11:PolyMorph(多形, morpheme, phoneme)
+  :name: PolyMorph(多形, morpheme, phoneme)
   :type: file
   :file_path:
   :x: 246.67382446430284
@@ -181,33 +90,32 @@
   :fixed: false
 :edges:
 - :from: 1
-  # from: 1:HyperCard/, to: 2:知識の構造(ツリーではない)--qiita/
+  # from: HyperCard/, to: 知識の構造(ツリーではない)--qiita/
   :to: 2
 - :from: 2
-  # from: 2:知識の構造(ツリーではない)--qiita/, to: 3:Tree==MindMap
+  # from: 知識の構造(ツリーではない)--qiita/, to: Tree==MindMap
   :to: 3
 - :from: 1
-  # from: 1:HyperCard/, to: 4:chunking(7\pm2)
+  # from: HyperCard/, to: chunking(7\pm2)
   :to: 4
 - :from: 1
-  # from: 1:HyperCard/, to: 5:知的生産の技術(梅棹)/
+  # from: HyperCard/, to: 知的生産の技術(梅棹)/
   :to: 5
 - :from: 5
-  # from: 5:知的生産の技術(梅棹)/, to: 6:京大(B5)カード, 記憶の代わりに記録
+  # from: 知的生産の技術(梅棹)/, to: 京大(B5)カード, 記憶の代わりに記録
   :to: 6
 - :from: 1
-  # from: 1:HyperCard/, to: 7:toggle表示/
+  # from: HyperCard/, to: toggle表示/
   :to: 7
 - :from: 7
-  # from: 7:toggle表示/, to: 8:enCapsule(隠蔽)
+  # from: toggle表示/, to: enCapsule(隠蔽)
   :to: 8
 - :from: 8
-  # from: 8:enCapsule(隠蔽), to: 9:object指向(思考)/
+  # from: enCapsule(隠蔽), to: object指向(思考)/
   :to: 9
 - :from: 9
-  # from: 9:object指向(思考)/, to: 10:Inherit(遺産継承)
+  # from: object指向(思考)/, to: Inherit(遺産継承)
   :to: 10
 - :from: 9
-  # from: 9:object指向(思考)/, to: 11:PolyMorph(多形, morpheme, phoneme)
->>>>>>> 64f0010 (rev open for multiple files)
+  # from: object指向(思考)/, to: PolyMorph(多形, morpheme, phoneme)
   :to: 11

@@ -3,7 +3,7 @@
 - :id: 1
   :name: HyperCard/
   :type: dir
-  :file_path:
+  :file_path: https://hcsimulator.com/
   :x: 229
   :y: 206
   :fixed: true
@@ -31,21 +31,21 @@
 - :id: 5
   :name: 知的生産の技術(梅棹)/
   :type: dir
-  :file_path:
+  :file_path: https://www.iwanami.co.jp/book/b267410.html
   :x: 345
   :y: 106
   :fixed: true
 - :id: 6
   :name: 京大(B5)カード, 記憶の代わりに記録
   :type: file
-  :file_path:
+  :file_path: https://note.com/kappa_scp2511/n/nb10f29014958
   :x: 374
   :y: 46
   :fixed: true
 - :id: 7
   :name: toggle表示/
   :type: dir
-  :file_path:
+  :file_path: '..'
   :x: 198
   :y: 344
   :fixed: true
