@@ -9,6 +9,9 @@
 
 * links
 - [[https://kwanseio365-my.sharepoint.com/:f:/g/personal/cru32369_nuc_kwansei_ac_jp/EuUyUic5wypHkIxs5ZcRoIIBNGhlPyYYDkmEKFX5aO8vnA?e=xFpMed][動画他資料]]
+- zoom
+  - Meeting ID: 822 0399 4456
+  - Passcode: 473581
 - Github
   - git clone git@github.com:daddygongon/multi_scale_25f.git
     でcloneできます．

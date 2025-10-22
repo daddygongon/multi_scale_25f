@@ -20,6 +20,11 @@ see ** ruby2d install
 - git clone git@github.com:daddygongon/mk_semi_lattice.git
 - cd mk_semi_lattice
 - sudo rake install:local
+# install ruby development
+# gem install command_line colorize 
+# japanese font
+# debian 12? for Ohsaki group
+- sudo apt install fonts-noto-cjk fonts-takao-gothic fonts-vlgothic
 
 
 * names
