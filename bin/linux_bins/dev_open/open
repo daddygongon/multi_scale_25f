@@ -1,18 +1,20 @@
 #!/usr/bin/env ruby
 require 'open3'
 
-target = ARGV[0] || '.'
-case 
-when target == '.'
-  system "explorer.exe #{target}"
-when target.match(/^http/)
-  # system "cmd.exe /c start #{target}"
-  system "explorer.exe #{target}"
-when target.match(/(html|pdf|jpg|jpeg|png)$/)
-  out, err, status = Open3.capture3("wslpath -m #{target}")
-  p target_path = "file:#{out}"
-  system "explorer.exe #{target_path}"
-else
-  puts "no command for #{target}"
-end
+targets = ARGV || '.'
+targets.each do |target|
+  case 
+  when target == '.'
+    system "explorer.exe #{target}"
+  when target.match(/^http/)
+    # system "cmd.exe /c start #{target}"
+    system "explorer.exe #{target}"
+  when target.match(/(html|pdf|jpg|jpeg|png)$/)
+    out, err, status = Open3.capture3("wslpath -m #{target}")
+    p target_path = "file:#{out}"
+    system "explorer.exe #{target_path}"
+  else
+    puts "no command for #{target}"
+  end
 
+end
