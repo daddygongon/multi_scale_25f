@@ -4,88 +4,88 @@
   :name: HyperCard/
   :type: dir
   :file_path: https://hcsimulator.com/
-  :x: 229
-  :y: 206
+  :x: 276.0361629221503
+  :y: 213.29445872767232
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 2
   :name: 知識の構造(ツリーではない)--qiita/
   :type: dir
   :file_path: https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53
-  :x: 421
-  :y: 206
+  :x: 361.2460960110588
+  :y: 231.33582442057866
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 3
   :name: Tree==MindMap
   :type: file
   :file_path: "../knowledge_fixer.pdf"
-  :x: 479
-  :y: 163
+  :x: 434.5687214785492
+  :y: 185.7000071792709
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 4
   :name: chunking(7\pm2)
   :type: file
   :file_path: "../../w1_chunk/w1_chunk.pdf"
-  :x: 359
-  :y: 339
+  :x: 287.2945002770935
+  :y: 297.95465067059763
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 5
   :name: 知的生産の技術(梅棹)/
   :type: dir
   :file_path: https://www.iwanami.co.jp/book/b267410.html
-  :x: 345
-  :y: 106
+  :x: 269.4568812460105
+  :y: 129.47331777891682
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 6
   :name: 京大(B5)カード, 記憶の代わりに記録
   :type: file
   :file_path: https://note.com/kappa_scp2511/n/nb10f29014958
-  :x: 374
-  :y: 46
+  :x: 341.6660211825448
+  :y: 85.29394767859257
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 7
   :name: toggle表示/
   :type: dir
-  :file_path:
-  :x: 198
-  :y: 344
+  :file_path: ".."
+  :x: 197.57167772380808
+  :y: 252.05484575462552
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 8
   :name: enCapsule(隠蔽)
   :type: file
   :file_path:
-  :x: 213.2224846934479
-  :y: 433.0917083675818
+  :x: 166.880740934629
+  :y: 333.46590262939395
   :color: orange
   :fixed: false
 - :id: 9
   :name: object指向(思考)/
   :type: dir
   :file_path:
-  :x: 280
-  :y: 494
+  :x: 205.9667365223918
+  :y: 409.7846848446939
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 10
   :name: Inherit(遺産継承)
   :type: file
   :file_path:
-  :x: 363.84515362527605
-  :y: 480.03611037160994
+  :x: 290.64055945590064
+  :y: 427.12487052341515
   :color: orange
   :fixed: false
 - :id: 11
   :name: PolyMorph(多形, morpheme, phoneme)
   :type: file
   :file_path:
-  :x: 246.67382446430284
-  :y: 572.1944117195335
+  :x: 216.53524348268127
+  :y: 494.9599951807378
   :color: orange
   :fixed: false
 :edges:

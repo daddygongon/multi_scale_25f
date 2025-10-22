@@ -6,49 +6,49 @@
   :file_path: https://hcsimulator.com/
   :x: 229
   :y: 206
-  :fixed: true
+  :fixed: false
 - :id: 2
   :name: 知識の構造(ツリーではない)--qiita/
   :type: dir
   :file_path: https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53
   :x: 421
   :y: 206
-  :fixed: true
+  :fixed: false
 - :id: 3
   :name: Tree==MindMap
   :type: file
   :file_path: "../knowledge_fixer.pdf"
   :x: 479
   :y: 163
-  :fixed: true
+  :fixed: false
 - :id: 4
   :name: chunking(7\pm2)
   :type: file
   :file_path: "../../w1_chunk/w1_chunk.pdf"
   :x: 359
   :y: 339
-  :fixed: true
+  :fixed: false
 - :id: 5
   :name: 知的生産の技術(梅棹)/
   :type: dir
   :file_path: https://www.iwanami.co.jp/book/b267410.html
   :x: 345
   :y: 106
-  :fixed: true
+  :fixed: false
 - :id: 6
   :name: 京大(B5)カード, 記憶の代わりに記録
   :type: file
   :file_path: https://note.com/kappa_scp2511/n/nb10f29014958
   :x: 374
   :y: 46
-  :fixed: true
+  :fixed: false
 - :id: 7
   :name: toggle表示/
   :type: dir
   :file_path: '..'
   :x: 198
   :y: 344
-  :fixed: true
+  :fixed: false
 - :id: 8
   :name: enCapsule(隠蔽)
   :type: file
@@ -62,7 +62,7 @@
   :file_path:
   :x: 280
   :y: 494
-  :fixed: true
+  :fixed: false
 - :id: 10
   :name: Inherit(遺産継承)
   :type: file
