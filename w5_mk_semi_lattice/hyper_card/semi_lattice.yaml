@@ -4,88 +4,88 @@
   :name: HyperCard/
   :type: dir
   :file_path: https://hcsimulator.com/
-  :x: 329
-  :y: 289
+  :x: 446
+  :y: 252
   :color: orange
   :fixed: true
 - :id: 2
   :name: 知識の構造(ツリーではない)--qiita/
   :type: dir
   :file_path: https://qiita.com/daddygongon/items/dcf50940f04fb34c5c53
-  :x: 470
-  :y: 159
+  :x: 225
+  :y: 379
   :color: orange
   :fixed: true
 - :id: 3
   :name: Tree==MindMap
   :type: file
   :file_path: "../knowledge_fixer.pdf"
-  :x: 476
-  :y: 92
+  :x: 314
+  :y: 444
   :color: orange
   :fixed: true
 - :id: 4
   :name: chunking(7\pm2)
   :type: file
   :file_path: "../../w1_chunk/w1_chunk.pdf"
-  :x: 244
-  :y: 353
+  :x: 365.20910617544695
+  :y: 227.3684646720493
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 5
   :name: 知的生産の技術(梅棹)/
   :type: dir
   :file_path: https://www.iwanami.co.jp/book/b267410.html
-  :x: 223.71499136011832
-  :y: 156.54302758289572
+  :x: 417.37223413187246
+  :y: 312.8071401354919
   :color: orange
   :fixed: true
 - :id: 6
   :name: 京大(B5)カード, 記憶の代わりに記録
   :type: file
   :file_path: https://note.com/kappa_scp2511/n/nb10f29014958
-  :x: 282.1162944687574
-  :y: 94.78310696108092
+  :x: 486.5362618723061
+  :y: 362.2170305089843
   :color: orange
   :fixed: true
 - :id: 7
   :name: toggle表示/
   :type: dir
   :file_path: ".."
-  :x: 433
-  :y: 345
+  :x: 444.177177713572
+  :y: 167.94181051328235
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 8
   :name: enCapsule(隠蔽)
   :type: file
   :file_path:
-  :x: 483
-  :y: 409
+  :x: 456.600864975564
+  :y: 86.24010911332658
   :color: orange
-  :fixed: true
+  :fixed: false
 - :id: 9
   :name: object指向(思考)/
   :type: dir
   :file_path:
-  :x: 546
-  :y: 472
+  :x: 538
+  :y: 97
   :color: orange
   :fixed: true
 - :id: 10
   :name: Inherit(遺産継承)
   :type: file
   :file_path:
-  :x: 499.42321655238754
-  :y: 543.102765372904
+  :x: 551.292463717134
+  :y: 180.95421614385236
   :color: orange
   :fixed: false
 - :id: 11
   :name: PolyMorph(多形, morpheme, phoneme)
   :type: file
   :file_path:
-  :x: 600.0
-  :y: 537.642973729105
+  :x: 526.6807614803768
+  :y: 12.757048726104811
   :color: orange
   :fixed: false
 :edges:
